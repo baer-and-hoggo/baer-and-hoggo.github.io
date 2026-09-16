@@ -387,6 +387,13 @@
       (progress - PHASES.holdEnd) / (PHASES.morphEnd - PHASES.holdEnd)
     ));
     const morphProgress = easeInOutCubic(morphAmount);
+    const holdAmount = Math.max(0, Math.min(1,
+      (progress - PHASES.burstEnd) / (PHASES.holdEnd - PHASES.burstEnd)
+    ));
+    // A soft sine envelope makes the voxels keep floating after the burst,
+    // while returning to the exact burst positions before the morph begins.
+    const holdMotion = Math.sin(Math.PI * holdAmount);
+    const motionTime = performance.now() * 0.0018;
     const colorProgress = progress < PHASES.burstEnd
       ? 0.22 * burstProgress
       : progress < PHASES.holdEnd
@@ -409,11 +416,17 @@
         size *= 1 + 0.12 * burstProgress;
         rotation = voxel.spin * burstProgress;
       } else if (progress >= PHASES.burstEnd && progress < PHASES.holdEnd) {
-        x = voxel.fromX + voxel.arcX * 1.5;
-        y = voxel.fromY + voxel.arcY * 1.5;
-        z = voxel.arcZ * 1.25;
-        size = voxel.fromSize * 1.12;
-        rotation = voxel.spin;
+        const burstX = voxel.fromX + voxel.arcX * 1.5;
+        const burstY = voxel.fromY + voxel.arcY * 1.5;
+        const burstZ = voxel.arcZ * 1.25;
+        const phase = index * 0.73;
+        const sway = Math.sin(motionTime * (1.4 + (index % 3) * 0.12) + phase);
+        const bob = Math.cos(motionTime * (1.1 + (index % 4) * 0.08) + phase * 1.3);
+        x = burstX + sway * (5 + (index % 4)) * holdMotion;
+        y = burstY + bob * (4 + (index % 3)) * holdMotion;
+        z = burstZ + Math.sin(motionTime * 1.7 + phase) * 12 * holdMotion;
+        size = voxel.fromSize * 1.12 * (1 + sway * 0.035 * holdMotion);
+        rotation = voxel.spin + sway * 0.08 * holdMotion;
       } else if (progress >= PHASES.holdEnd && progress < PHASES.morphEnd) {
         x = lerp(voxel.fromX + voxel.arcX * 1.5, voxel.toX, morphProgress);
         y = lerp(voxel.fromY + voxel.arcY * 1.5, voxel.toY, morphProgress);
