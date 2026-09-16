@@ -370,7 +370,7 @@
     return start + (end - start) * amount;
   }
 
-  function renderVoxels(voxels, progress) {
+  function renderVoxels(voxels, progress, refinement = 0) {
     if (!renderer || !camera || !instancedMesh || !dummy) {
       return;
     }
@@ -392,6 +392,8 @@
       : progress < PHASES.holdEnd
         ? 0.22
         : 0.22 + 0.78 * easeOutCubic(morphAmount);
+    const refinementAmount = Math.max(0, Math.min(1, refinement));
+    material.opacity = 1 - refinementAmount * 0.65;
 
     voxels.forEach((voxel, index) => {
       let x = voxel.fromX;
@@ -421,7 +423,10 @@
       } else if (progress >= PHASES.morphEnd) {
         x = voxel.toX;
         y = voxel.toY;
-        size = voxel.toSize;
+        // During the final page fade, reveal more of the crisp image between
+        // progressively smaller, lighter voxels instead of dropping the
+        // chunky target representation all at once.
+        size = lerp(voxel.toSize, Math.max(1.25, voxel.toSize * 0.35), refinementAmount);
       }
 
       dummy.position.set(x - width / 2, height / 2 - y, z);
@@ -437,12 +442,22 @@
     renderer.render(scene, camera);
   }
 
-  function fadeViewIn(view) {
+  function fadeViewIn(view, onProgress) {
     return new Promise((resolve) => {
       view.style.transition = 'none';
       view.style.opacity = '0';
       view.style.pointerEvents = 'none';
       void view.offsetWidth;
+
+      const startedAt = performance.now();
+      const updateProgress = (now) => {
+        const progress = Math.min(1, (now - startedAt) / PAGE_FADE_DURATION);
+        onProgress(progress);
+        if (progress < 1) {
+          window.requestAnimationFrame(updateProgress);
+        }
+      };
+      window.requestAnimationFrame(updateProgress);
 
       if (typeof view.animate === 'function') {
         const animation = view.animate(
@@ -512,7 +527,9 @@
         transition.targetView.style.pointerEvents = 'none';
         transition.targetImage.style.transition = 'none';
         transition.targetImage.style.opacity = '1';
-        fadeViewIn(transition.targetView).then(() => {
+        fadeViewIn(transition.targetView, (fadeProgress) => {
+          renderVoxels(transition.voxels, 1, fadeProgress);
+        }).then(() => {
           updateBrowserState(viewName);
           resolve();
         });
