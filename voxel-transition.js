@@ -165,6 +165,21 @@
     return new Promise((resolve) => window.requestAnimationFrame(resolve));
   }
 
+  async function waitForStableLayout() {
+    await waitForFrame();
+    await waitForFrame();
+  }
+
+  function jumpToTop() {
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+    // The site enables smooth scrolling globally. Disable it for the
+    // measurement jump so phone browser scroll settling cannot offset voxels.
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = previousScrollBehavior;
+  }
+
   async function waitForImage(image) {
     if (!image) {
       throw new Error('Voxel transition image was not found.');
@@ -283,21 +298,21 @@
       throw new Error(`Voxel transition endpoint is incomplete for ${viewName}.`);
     }
 
-    window.scrollTo(0, 0);
+    jumpToTop();
     setViewState(fromView, true, 1);
     setViewState(targetView, false, 0);
     fromImage.style.transition = 'none';
     fromImage.style.opacity = '1';
     targetImage.style.transition = 'none';
     targetImage.style.opacity = '1';
-    await waitForFrame();
+    await waitForStableLayout();
     const fromPoints = await sampleImage(fromImage, endpoint.fromData);
 
     setViewState(fromView, false, 0);
     // Keep the measurement layout mounted but transparent. Making it opaque
     // here causes a visible destination-page flash before the canvas starts.
     setViewState(targetView, true, 0);
-    await waitForFrame();
+    await waitForStableLayout();
     const targetPoints = await sampleImage(targetImage, endpoint.toData);
     if (!fromPoints.length || !targetPoints.length) {
       throw new Error('Voxel transition images produced no sample points.');
