@@ -555,10 +555,6 @@
     document.getElementById('btn-discover-farmion')?.addEventListener('click', () => {
       triggerVoxelTransition('farmion');
     });
-    document.getElementById('btn-back-studio')?.addEventListener('click', () => {
-      triggerVoxelTransition('studio');
-    });
-
     if (window.location.hash.toLowerCase() === '#farmion') {
       switchDOMView('farmion', false);
     } else {
