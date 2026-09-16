@@ -69,8 +69,12 @@
     if (favicon) {
       favicon.href = viewName === 'farmion' ? 'assets/chicken.png' : 'assets/bh-icon.png';
     }
-    if (window.location.hash !== `#${viewName}`) {
-      window.history.replaceState(null, '', `#${viewName}`);
+    const nextUrl = viewName === 'farmion'
+      ? `${window.location.pathname}${window.location.search}#farmion`
+      : `${window.location.pathname}${window.location.search}`;
+    const desiredHash = viewName === 'farmion' ? '#farmion' : '';
+    if (window.location.hash !== desiredHash) {
+      window.history.replaceState(null, '', nextUrl);
     }
   }
 
