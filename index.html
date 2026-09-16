@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baer &amp; Hoggo Games | Farmion</title>
+  <meta name="description" content="A tiny game studio consisting of 2 friends working on Farmion, a cozy voxel farming &amp; life sim game.">
+  <link id="site-favicon" rel="icon" type="image/png" href="assets/bh-icon.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Three.js for 3D Voxel Transition Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Fullscreen WebGL Voxel Transition Canvas -->
+  <canvas id="voxel-canvas"></canvas>
+
+  <!-- =========================================================================
+       1. STUDIO VIEW (Minimalist Landing Page)
+       ========================================================================= -->
+  <div id="studio-view">
+    <main class="container">
+      <div class="logo-wrapper">
+        <picture>
+          <source srcset="logo.svg" type="image/svg+xml">
+          <img src="logo.png" alt="Baer &amp; Hoggo Games" class="logo">
+        </picture>
+      </div>
+
+      <p class="description">
+        A tiny game studio consisting of 2 friends working on <strong>Farmion</strong>, a cozy voxel farming &amp; life sim game.
+      </p>
+
+      <div class="links">
+        <button type="button" class="btn btn-primary" id="btn-discover-farmion">
+          <svg viewBox="0 0 24 24"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zM8.54 18.068c0-.986.797-1.785 1.785-1.785.986 0 1.785.799 1.785 1.785 0 .988-.799 1.785-1.785 1.785-.988 0-1.785-.797-1.785-1.785zm7.4-6.84c-1.258 0-2.278-1.021-2.278-2.278 0-1.258 1.02-2.279 2.278-2.279 1.257 0 2.279 1.021 2.279 2.279 0 1.257-1.022 2.278-2.279 2.278z"/></svg>
+          <span>Discover Farmion</span>
+        </button>
+        <a href="mailto:jjvanvliet@protonmail.com" class="btn">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>Contact</span>
+        </a>
+      </div>
+
+      <div class="flags" aria-label="Netherlands &amp; Estonia">
+        <svg class="flag" viewBox="0 0 16 11" width="20" height="14" role="img" aria-label="Netherlands" title="Netherlands">
+          <rect width="16" height="11" fill="#21468B"/>
+          <rect width="16" height="7.333" fill="#FFFFFF"/>
+          <rect width="16" height="3.667" fill="#AE1C28"/>
+        </svg>
+        <svg class="flag" viewBox="0 0 16 11" width="20" height="14" role="img" aria-label="Estonia" title="Estonia">
+          <rect width="16" height="11" fill="#FFFFFF"/>
+          <rect width="16" height="7.333" fill="#000000"/>
+          <rect width="16" height="3.667" fill="#0072CE"/>
+        </svg>
+      </div>
+
+      <footer>
+        &copy; <span class="year-span"></span> Baer &amp; Hoggo Games.
+      </footer>
+    </main>
+  </div>
+
+  <!-- =========================================================================
+       2. FARMION VIEW (Cozy Themed Homepage)
+       ========================================================================= -->
+  <div id="farmion-view" style="display: none;">
+    
+    <!-- Top Navigation Bar -->
+    <nav class="farm-nav">
+      <button type="button" class="nav-back-btn" id="btn-back-studio">
+        <img src="assets/bh-icon.png" alt="B&amp;H Games" class="nav-back-icon">
+        <span>Return to B&amp;H Games</span>
+      </button>
+
+      <div class="farm-nav-actions">
+        <a href="https://store.steampowered.com/app/2426390/Farmion/" target="_blank" rel="noopener noreferrer" class="btn-steam-cozy">
+          <svg viewBox="0 0 24 24"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zM8.54 18.068c0-.986.797-1.785 1.785-1.785.986 0 1.785.799 1.785 1.785 0 .988-.799 1.785-1.785 1.785-.988 0-1.785-.797-1.785-1.785zm7.4-6.84c-1.258 0-2.278-1.021-2.278-2.278 0-1.258 1.02-2.279 2.278-2.279 1.257 0 2.279 1.021 2.279 2.279 0 1.257-1.022 2.278-2.279 2.278z"/></svg>
+          <span>Wishlist on Steam</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="farm-hero">
+      <h1 class="farm-title">
+        <img src="assets/farmion-logo.png" alt="Farmion" class="farm-logo-img">
+      </h1>
+
+      <p class="farm-tagline">
+        Build your dream farm in a cozy voxel world, alone or together. Grow at your own pace with offline progression, helping hands, and relaxed mechanics designed to let you enjoy the farm your way.
+      </p>
+
+      <div class="farm-hero-cta">
+        <a href="https://store.steampowered.com/app/2426390/Farmion/" target="_blank" rel="noopener noreferrer" class="btn-steam-large">
+          <svg viewBox="0 0 24 24"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 12-5.373 12-12s-5.373-12-12-12zM8.54 18.068c0-.986.797-1.785 1.785-1.785.986 0 1.785.799 1.785 1.785 0 .988-.799 1.785-1.785 1.785-.988 0-1.785-.797-1.785-1.785zm7.4-6.84c-1.258 0-2.278-1.021-2.278-2.278 0-1.258 1.02-2.279 2.278-2.279 1.257 0 2.279 1.021 2.279 2.279 0 1.257-1.022 2.278-2.279 2.278z"/></svg>
+          <span>Wishlist on Steam</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Gameplay Screenshots Gallery -->
+    <section class="farm-gallery-section">
+      <div class="farm-section-header">
+        <h2>In-Game Screenshots</h2>
+        <p>A peek at the colorful, cozy voxel world waiting for you in Farmion.</p>
+      </div>
+
+      <div class="main-screenshot-frame">
+        <img id="main-screenshot" src="assets/screenshots/shot1.jpg" alt="Farmion Gameplay Screenshot">
+      </div>
+
+      <div class="screenshots-thumbnails">
+        <button type="button" class="thumb-btn active" onclick="switchScreenshot(this, 'assets/screenshots/shot1.jpg')">
+          <img src="assets/screenshots/shot1.jpg" alt="Farmion Screenshot 1">
+        </button>
+        <button type="button" class="thumb-btn" onclick="switchScreenshot(this, 'assets/screenshots/shot2.jpg')">
+          <img src="assets/screenshots/shot2.jpg" alt="Farmion Screenshot 2">
+        </button>
+        <button type="button" class="thumb-btn" onclick="switchScreenshot(this, 'assets/screenshots/shot3.jpg')">
+          <img src="assets/screenshots/shot3.jpg" alt="Farmion Screenshot 3">
+        </button>
+        <button type="button" class="thumb-btn" onclick="switchScreenshot(this, 'assets/screenshots/shot4.jpg')">
+          <img src="assets/screenshots/shot4.jpg" alt="Farmion Screenshot 4">
+        </button>
+        <button type="button" class="thumb-btn" onclick="switchScreenshot(this, 'assets/screenshots/shot5.jpg')">
+          <img src="assets/screenshots/shot5.jpg" alt="Farmion Screenshot 5">
+        </button>
+        <button type="button" class="thumb-btn" onclick="switchScreenshot(this, 'assets/screenshots/shot6.jpg')">
+          <img src="assets/screenshots/shot6.jpg" alt="Farmion Screenshot 6">
+        </button>
+      </div>
+    </section>
+
+    <div class="farm-chicken-after-gallery">
+      <div class="chicken-mascot-wrapper">
+        <img src="assets/chicken.png" alt="Farmion Voxel Chicken" class="chicken-mascot">
+      </div>
+    </div>
+
+    <!-- Farmion Footer -->
+    <footer class="farm-footer">
+      <div class="farm-footer-inner">
+        <img src="assets/bh-mascot.png" alt="Baer &amp; Hoggo Games Mascot" class="footer-mascot" id="footer-mascot-btn" title="Back to Baer &amp; Hoggo Games">
+
+        <div class="farm-footer-links">
+          <a href="https://store.steampowered.com/app/2426390/Farmion/" target="_blank" rel="noopener noreferrer">Steam Store</a>
+          <a href="mailto:jjvanvliet@protonmail.com">Contact Us</a>
+          <a href="#" id="link-return-studio">Studio Page</a>
+        </div>
+
+        <div class="flags" aria-label="Netherlands &amp; Estonia">
+          <svg class="flag" viewBox="0 0 16 11" width="20" height="14" role="img" aria-label="Netherlands" title="Netherlands">
+            <rect width="16" height="11" fill="#21468B"/>
+            <rect width="16" height="7.333" fill="#FFFFFF"/>
+            <rect width="16" height="3.667" fill="#AE1C28"/>
+          </svg>
+          <svg class="flag" viewBox="0 0 16 11" width="20" height="14" role="img" aria-label="Estonia" title="Estonia">
+            <rect width="16" height="11" fill="#FFFFFF"/>
+            <rect width="16" height="7.333" fill="#000000"/>
+            <rect width="16" height="3.667" fill="#0072CE"/>
+          </svg>
+        </div>
+
+        <p>&copy; <span class="year-span"></span> Baer &amp; Hoggo Games. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Screenshot Gallery Switcher Helper -->
+  <script>
+    function switchScreenshot(button, src) {
+      const mainImg = document.getElementById('main-screenshot');
+      if (mainImg) {
+        mainImg.style.opacity = '0.4';
+        setTimeout(() => {
+          mainImg.src = src;
+          mainImg.style.opacity = '1';
+        }, 120);
+      }
+      document.querySelectorAll('.thumb-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    }
+
+    // Set dynamic copyright year
+    document.querySelectorAll('.year-span').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+
+    // Wire extra studio return links
+    document.addEventListener('DOMContentLoaded', () => {
+      const footerMascot = document.getElementById('footer-mascot-btn');
+      if (footerMascot) {
+        footerMascot.addEventListener('click', () => {
+          if (window.triggerVoxelTransition) window.triggerVoxelTransition('studio');
+        });
+      }
+      const returnLink = document.getElementById('link-return-studio');
+      if (returnLink) {
+        returnLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (window.triggerVoxelTransition) window.triggerVoxelTransition('studio');
+        });
+      }
+    });
+  </script>
+
+  <!-- Voxel Transition Engine -->
+  <script src="voxel-image-data.js"></script>
+  <script src="voxel-farmion-data.js"></script>
+  <script src="voxel-transition.js"></script>
+</body>
+</html>

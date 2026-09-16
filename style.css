@@ -1,0 +1,815 @@
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+:root {
+  /* Studio Theme */
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --btn-hover: #f3f4f6;
+
+  /* Farmion Cozy Theme */
+  --farm-bg: #fbf9f4;
+  --farm-card: #ffffff;
+  --farm-green: #59983b;
+  --farm-green-hover: #487e2f;
+  --farm-green-light: #eef7e9;
+  --farm-gold: #f59e0b;
+  --farm-gold-hover: #fbbf24;
+  --farm-text: #2d3725;
+  --farm-muted: #636d5c;
+  --farm-border: #e9e3d5;
+  --farm-shadow: 0 12px 36px rgba(78, 100, 60, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Voxel Transition Canvas Overlay
+   ========================================================================== */
+#voxel-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#voxel-canvas.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ==========================================================================
+   Studio View (Minimalist Landing Page)
+   ========================================================================== */
+#studio-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 580px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-wrapper {
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.description {
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 460px;
+}
+
+.description strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 3.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.72rem 1.4rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary:hover {
+  background: #1f2937;
+  border-color: #1f2937;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.flags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.flag {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  display: block;
+  user-select: none;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.825rem;
+}
+
+/* ==========================================================================
+   Farmion View (Cozy Themed Homepage)
+   ========================================================================== */
+#farmion-view {
+  background: linear-gradient(180deg, #edf6e8 0%, #fbf9f4 18%, #fcfbf8 100%);
+  color: var(--farm-text);
+  min-height: 100vh;
+}
+
+/* Top Navigation */
+.farm-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(251, 249, 244, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--farm-border);
+}
+
+.nav-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  border: 1px solid var(--farm-border);
+  color: var(--farm-text);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.nav-back-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #111827;
+  transform: translateX(-2px);
+}
+
+.nav-back-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.farm-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-steam-cozy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: #111827;
+  color: #ffffff;
+  padding: 0.6rem 1.3rem;
+  border-radius: 10px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.18);
+  transition: all 0.2s ease;
+}
+
+.btn-steam-cozy:hover {
+  background: #000000;
+  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-steam-cozy svg {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+}
+
+/* Farmion Hero Section */
+.farm-hero {
+  padding: 4rem 1.5rem 2rem;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chicken-mascot-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.chicken-mascot {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgba(78, 100, 60, 0.2));
+  animation: gentleBob 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes gentleBob {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(-1deg); }
+}
+
+.farm-logo-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.08));
+}
+
+.farm-tagline {
+  font-size: 1.25rem;
+  color: var(--farm-text);
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto 2.25rem;
+  font-weight: 500;
+}
+
+.farm-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn-steam-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #111827;
+  color: #ffffff;
+  padding: 0.95rem 2.2rem;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(17, 24, 39, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-steam-large:hover {
+  background: #000000;
+  box-shadow: 0 8px 30px rgba(17, 24, 39, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-steam-large svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.btn-secondary-cozy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  color: var(--farm-text);
+  border: 1px solid var(--farm-border);
+  padding: 0.95rem 1.85rem;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-cozy:hover {
+  background: var(--farm-green-light);
+  border-color: var(--farm-green);
+  color: var(--farm-green-hover);
+  transform: translateY(-2px);
+}
+
+/* Panoramic Banner Showcase */
+.farm-showcase-container {
+  max-width: 1040px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.farm-banner-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--farm-shadow), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
+.farm-banner-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.farm-banner-frame:hover img {
+  transform: scale(1.015);
+}
+
+/* Section Headings */
+.farm-section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.farm-section-header h2 {
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: var(--farm-text);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.farm-section-header p {
+  color: var(--farm-muted);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Feature Cards Grid (Unclamped, Natural Flow) */
+.farm-features-section {
+  max-width: 1080px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+}
+
+.farm-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--farm-card);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--farm-border);
+  box-shadow: 0 8px 24px rgba(78, 100, 60, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(78, 100, 60, 0.1);
+  border-color: rgba(89, 152, 59, 0.35);
+}
+
+.feature-banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 0.5rem;
+  background: transparent;
+}
+
+.feature-content {
+  padding: 1rem 1.75rem 2rem;
+  text-align: left;
+}
+
+.feature-content h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--farm-text);
+  margin-bottom: 0.6rem;
+}
+
+.feature-content p {
+  color: var(--farm-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Extended Features Grid (About This Game details) */
+.farm-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.detail-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem;
+  border: 1px solid var(--farm-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  text-align: left;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--farm-green);
+}
+
+.detail-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.detail-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--farm-text);
+  margin-bottom: 0.5rem;
+}
+
+.detail-card p {
+  color: var(--farm-muted);
+  font-size: 0.925rem;
+  line-height: 1.55;
+}
+
+/* Screenshot Gallery */
+.farm-gallery-section {
+  max-width: 1080px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+}
+
+.main-screenshot-frame {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--farm-shadow);
+  border: 1px solid var(--farm-border);
+  background: #000;
+  margin-bottom: 1rem;
+}
+
+.main-screenshot-frame img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.screenshots-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+}
+
+.thumb-btn {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  aspect-ratio: 16 / 9;
+}
+
+.thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.thumb-btn.active {
+  border-color: var(--farm-green);
+  transform: scale(1.04);
+  box-shadow: 0 4px 14px rgba(89, 152, 59, 0.3);
+}
+
+.thumb-btn:hover:not(.active) {
+  opacity: 0.85;
+}
+
+/* Farmion mascot between the screenshots and the footer */
+.farm-chicken-after-gallery {
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.farm-chicken-after-gallery .chicken-mascot-wrapper {
+  margin-bottom: 0;
+}
+
+/* Wishlist Banner Callout */
+.farm-cta-banner {
+  max-width: 1040px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+}
+
+.cta-banner-inner {
+  background: linear-gradient(135deg, #243b1a 0%, #152410 100%);
+  border-radius: 28px;
+  padding: 3.5rem 3rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(26, 42, 18, 0.35);
+}
+
+.cta-banner-text {
+  text-align: left;
+}
+
+.cta-banner-text h3 {
+  font-size: 2.15rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+.cta-banner-text p {
+  font-size: 1.1rem;
+  color: #d4ebd0;
+  max-width: 520px;
+  line-height: 1.55;
+}
+
+.cta-banner-action {
+  flex-shrink: 0;
+}
+
+/* Fixed Gold Steam Button with Guaranteed High-Contrast */
+.btn-steam-gold {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  background: #f59e0b !important;
+  color: #111827 !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  padding: 1.15rem 2.4rem !important;
+  border-radius: 16px !important;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45) !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+.btn-steam-gold span {
+  color: #111827 !important;
+  font-weight: 800 !important;
+}
+
+.btn-steam-gold svg {
+  width: 24px !important;
+  height: 24px !important;
+  fill: #111827 !important;
+}
+
+.btn-steam-gold:hover {
+  background: #fbbf24 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.6) !important;
+}
+
+/* Farmion Footer */
+.farm-footer {
+  border-top: 1px solid var(--farm-border);
+  background: #f5f2ea;
+  padding: 3.5rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.farm-footer-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-mascot {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1.25rem;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.footer-mascot:hover {
+  transform: scale(1.06);
+}
+
+.farm-footer-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.farm-footer-links a {
+  color: var(--farm-text);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.farm-footer-links a:hover {
+  color: var(--farm-green);
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 900px) {
+  .farm-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .farm-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .farm-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cta-banner-text {
+    text-align: center;
+  }
+
+  .cta-banner-text p {
+    margin: 0 auto;
+  }
+
+  .screenshots-thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-wrapper {
+    max-width: 320px;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+  .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .farm-nav {
+    padding: 0.75rem 1rem;
+  }
+  .btn-steam-cozy span {
+    display: none;
+  }
+  .btn-steam-cozy {
+    padding: 0.55rem;
+  }
+  .farm-hero {
+    padding: 2.5rem 1rem 1rem;
+  }
+  .farm-hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-steam-large,
+  .btn-secondary-cozy {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-steam-gold {
+    width: 100%;
+    justify-content: center;
+  }
+}
