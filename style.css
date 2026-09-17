@@ -164,6 +164,64 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
+/* External community link used by both the studio and Farmion views. */
+.btn-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.72rem 1.4rem;
+  border: 1px solid #5865f2;
+  border-radius: 10px;
+  background: #5865f2;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-discord:hover {
+  background: #4752c4;
+  border-color: #4752c4;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-discord svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  fill: currentColor;
+}
+
+/* Keep the compact Farmion navigation in its cream-and-green visual language. */
+#farmion-view .btn-discord {
+  border-color: var(--farm-border);
+  background: #ffffff;
+  color: #5865f2;
+  box-shadow: 0 4px 14px rgba(78, 100, 60, 0.08);
+}
+
+#farmion-view .btn-discord:hover {
+  border-color: #5865f2;
+  background: #f5f3ff;
+  color: #4752c4;
+  box-shadow: 0 6px 18px rgba(88, 101, 242, 0.16);
+}
+
+/* Discover Farmion opens the local Farmion view, so it uses navigation chrome rather than Steam branding. */
+#btn-discover-farmion > svg {
+  display: none;
+}
+
+#btn-discover-farmion::before {
+  content: "→";
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
 .btn svg {
   width: 18px;
   height: 18px;
@@ -763,6 +821,12 @@ footer {
     display: none;
   }
   .btn-steam-cozy {
+    padding: 0.55rem;
+  }
+  .btn-discord span {
+    display: none;
+  }
+  .btn-discord {
     padding: 0.55rem;
   }
   .farm-hero {
