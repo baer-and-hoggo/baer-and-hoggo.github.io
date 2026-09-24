@@ -4,6 +4,8 @@ The public kit lives in `press/`. It is a static page with no build step require
 
 ## Editing
 
+Do not use em dashes in promotional or press kit copy, including page titles and PDF metadata.
+
 - `content.json`: facts, descriptions, contact email, gallery selection, and proposed regional pricing.
 - `build.py`: builds the press HTML, five-page PDF, text copy, source manifest, and three ZIP downloads.
 - `../../press/styles.css` and `../../press/app.js`: press page presentation and interactions.

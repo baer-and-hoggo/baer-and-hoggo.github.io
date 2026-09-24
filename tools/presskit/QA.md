@@ -2,6 +2,7 @@
 
 - Rendered and inspected all five PDF pages using Baloo 2 and Nunito. The pricing block on page 2 includes all three currency symbols.
 - Extracted the final PDF and verified all three proposed prices (USD, GBP, EUR).
+- Checked main/press page headings and title metadata, PDF text and metadata, plain-text copy, and archive contents for em dashes. Removed the browser-title em dash in the generator and regenerated the press page.
 - Confirmed the final USD/EUR prices ($10.95 / 9,95€) in both web pages, the factsheet, PDF, text copy, and complete asset archive. Brand artwork and Press copy use matching download labels and return the expected files.
 - Checked both web pages in a desktop browser and at phone widths, including the font update at 355px CSS width. No horizontal document overflow observed.
 - After extracting the shared layout, compared both pages at 1280px and 390px viewport widths. Header, title, hero image, and fact-banner bounds match exactly. Footer copyright and country labels share the same vertical center.
