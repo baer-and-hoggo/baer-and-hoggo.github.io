@@ -69,10 +69,13 @@
     if (favicon) {
       favicon.href = viewName === 'farmion' ? 'assets/chicken.png' : 'assets/bh-icon.png';
     }
+    const farmionHash = window.location.hash.toLowerCase().startsWith('#farmion')
+      ? window.location.hash
+      : '#farmion';
     const nextUrl = viewName === 'farmion'
-      ? `${window.location.pathname}${window.location.search}#farmion`
+      ? `${window.location.pathname}${window.location.search}${farmionHash}`
       : `${window.location.pathname}${window.location.search}`;
-    const desiredHash = viewName === 'farmion' ? '#farmion' : '';
+    const desiredHash = viewName === 'farmion' ? farmionHash : '';
     if (window.location.hash !== desiredHash) {
       window.history.replaceState(null, '', nextUrl);
     }
@@ -400,7 +403,7 @@
         ? 0.22
         : 0.22 + 0.78 * easeOutCubic(morphAmount);
     const refinementAmount = Math.max(0, Math.min(1, refinement));
-    material.opacity = 1 - refinementAmount * 0.65;
+    material.opacity = 1 - refinementAmount;
 
     voxels.forEach((voxel, index) => {
       let x = voxel.fromX;
@@ -456,109 +459,87 @@
   }
 
   function fadeViewIn(view, onProgress) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       view.style.transition = 'none';
       view.style.opacity = '0';
       view.style.pointerEvents = 'none';
-      void view.offsetWidth;
-
       const startedAt = performance.now();
-      const updateProgress = (now) => {
-        const progress = Math.min(1, (now - startedAt) / PAGE_FADE_DURATION);
-        onProgress(progress);
-        if (progress < 1) {
-          window.requestAnimationFrame(updateProgress);
-        }
-      };
-      window.requestAnimationFrame(updateProgress);
 
-      if (typeof view.animate === 'function') {
-        const animation = view.animate(
-          [{ opacity: 0 }, { opacity: 1 }],
-          { duration: PAGE_FADE_DURATION, easing: 'ease', fill: 'forwards' }
-        );
-        animation.onfinish = () => {
-          animation.cancel();
-          view.style.opacity = '1';
-          view.style.pointerEvents = 'auto';
-          resolve();
-        };
-        return;
-      }
-
-      // Fallback for older browsers: force the transparent paint, then start
-      // the transition on the following frame.
-      window.requestAnimationFrame(() => {
-        view.style.transition = `opacity ${PAGE_FADE_DURATION}ms ease`;
-        view.style.opacity = '1';
-        view.style.pointerEvents = 'auto';
-        window.setTimeout(() => {
-          view.style.transition = 'none';
-          resolve();
-        }, PAGE_FADE_DURATION + 40);
-      });
-    });
-  }
-
-  function animateVoxels(transition, viewName) {
-    return new Promise((resolve) => {
-      const startedAt = performance.now();
-      let targetMounted = false;
-      let pageFadeStarted = false;
-
+      // One bounded frame loop owns both fades and their completion. No final
+      // voxel callback may repaint the canvas after transition cleanup.
       const frame = (now) => {
-        const progress = Math.min(1, (now - startedAt) / TRANSITION_DURATION);
-        const sourceFade = progress < PHASES.fadeOutEnd
-          ? 1 - easeOutCubic(progress / PHASES.fadeOutEnd)
-          : 0;
-        transition.fromView.style.opacity = String(sourceFade);
-        transition.fromView.style.pointerEvents = 'none';
-
-        if (!targetMounted && progress >= PHASES.burstEnd) {
-          targetMounted = true;
-          setViewState(transition.targetView, true, 0);
-          transition.targetImage.style.transition = 'none';
-          transition.targetImage.style.opacity = '0';
+        try {
+          const progress = Math.min(1, (now - startedAt) / PAGE_FADE_DURATION);
+          view.style.opacity = String(easeOutCubic(progress));
+          onProgress(progress);
+          if (progress < 1) {
+            window.requestAnimationFrame(frame);
+          } else {
+            view.style.opacity = '1';
+            view.style.pointerEvents = 'auto';
+            resolve();
+          }
+        } catch (error) {
+          reject(error);
         }
-        renderVoxels(transition.voxels, progress);
-        if (progress < 1) {
-          window.requestAnimationFrame(frame);
-          return;
-        }
-
-        if (pageFadeStarted) {
-          return;
-        }
-        pageFadeStarted = true;
-        // Keep the finished target voxels visible while the actual page and
-        // its gradient fade up underneath them. This is the only destination
-        // reveal, so the page can no longer pop in during the morph.
-        renderVoxels(transition.voxels, 1);
-        transition.fromView.style.display = 'none';
-        transition.targetView.style.transition = 'none';
-        transition.targetView.style.opacity = '0';
-        transition.targetView.style.pointerEvents = 'none';
-        transition.targetImage.style.transition = 'none';
-        transition.targetImage.style.opacity = '1';
-        fadeViewIn(transition.targetView, (fadeProgress) => {
-          renderVoxels(transition.voxels, 1, fadeProgress);
-        }).then(() => {
-          updateBrowserState(viewName);
-          resolve();
-        });
       };
-
       window.requestAnimationFrame(frame);
     });
   }
 
+  async function animateVoxels(transition, viewName) {
+    await new Promise((resolve, reject) => {
+      const startedAt = performance.now();
+      let targetMounted = false;
+      const frame = (now) => {
+        try {
+          const progress = Math.min(1, (now - startedAt) / TRANSITION_DURATION);
+          const sourceFade = progress < PHASES.fadeOutEnd
+            ? 1 - easeOutCubic(progress / PHASES.fadeOutEnd)
+            : 0;
+          transition.fromView.style.opacity = String(sourceFade);
+          transition.fromView.style.pointerEvents = 'none';
+          if (!targetMounted && progress >= PHASES.burstEnd) {
+            targetMounted = true;
+            setViewState(transition.targetView, true, 0);
+            transition.targetImage.style.opacity = '0';
+          }
+          renderVoxels(transition.voxels, progress);
+          if (progress < 1) {
+            window.requestAnimationFrame(frame);
+          } else {
+            resolve();
+          }
+        } catch (error) {
+          reject(error);
+        }
+      };
+      window.requestAnimationFrame(frame);
+    });
+
+    transition.fromView.style.display = 'none';
+    transition.targetImage.style.transition = 'none';
+    transition.targetImage.style.opacity = '1';
+    await fadeViewIn(transition.targetView, (progress) => {
+      renderVoxels(transition.voxels, 1, progress);
+    });
+    updateBrowserState(viewName);
+  }
+
   function clearVoxels() {
+    if (material) {
+      material.opacity = 0;
+    }
     if (instancedMesh) {
       instancedMesh.count = 0;
       instancedMesh.instanceMatrix.needsUpdate = true;
       if (instancedMesh.instanceColor) {
         instancedMesh.instanceColor.needsUpdate = true;
       }
+    }
+    // Reset the rendered frame as well as the mesh, including on error paths.
+    if (renderer) {
+      renderer.clear();
     }
   }
 
@@ -604,8 +585,12 @@
     document.getElementById('btn-discover-farmion')?.addEventListener('click', () => {
       triggerVoxelTransition('farmion');
     });
-    if (window.location.hash.toLowerCase() === '#farmion') {
+    if (window.location.hash.toLowerCase().startsWith('#farmion')) {
       switchDOMView('farmion', false);
+      const section = document.getElementById(window.location.hash.slice(1));
+      if (section) {
+        window.requestAnimationFrame(() => section.scrollIntoView({ behavior: 'instant' }));
+      }
     } else {
       switchDOMView('studio', false);
     }

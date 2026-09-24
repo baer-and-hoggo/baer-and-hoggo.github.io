@@ -1,0 +1,270 @@
+{
+  "type": "game",
+  "name": "Farmion",
+  "steam_appid": 2426390,
+  "required_age": 0,
+  "is_free": false,
+  "detailed_description": "<p class=\"bb_paragraph\" >Welcome to Farmion, a cozy voxel farming and life simulation game</p><p class=\"bb_paragraph\" >Design your farm how you want, including the terrain around it. Whether you prefer efficiency over aesthetics, you can try to efficiently explore and level up crops to find the perfect money maker. Or if you prefer to make your farm neat, we'll have a photo mode for you to create an aesthetically pleasing and relaxing farm. Farming combined with life sim gameplay, makes Farmion.</p><p class=\"bb_paragraph\" ></p><p class=\"bb_paragraph\" ><span class=\"bb_img_ctn\"><video class=\"bb_img\" autoplay muted loop playsinline poster=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/9d9209003abd8428f672cbed243eee3c.poster.avif?t=1790242343\" width=1160 height=302 ><source src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/9d9209003abd8428f672cbed243eee3c.webm?t=1790242343\" type=\"video/webm; codecs=vp9\"><source src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/9d9209003abd8428f672cbed243eee3c.mp4?t=1790242343\" type=\"video/mp4\"></video></span></p><h2 class=\"bb_tag\" ><strong>Farm alone or with friends</strong></h2><p class=\"bb_paragraph\" >Sometimes we want to enjoy a nice game on our own. You can progress your farm as a solo player, or opt to play co-op and play together with your friends. If you have a group of friends you really want to share one farm with, you can do so with custom save-game ownership rules</p><h2 class=\"bb_tag\" ><strong>Market your Inventory</strong></h2><p class=\"bb_paragraph\" >Take your goods and stock them on market shelves to sell to customers over time and earn Qbs; our currency to expand into the world of Processing, Fine Dining and Decorations.</p><h2 class=\"bb_tag\" ><strong>Processing Goods</strong></h2><p class=\"bb_paragraph\" >Create new processed materials with your ingredients, whether that's something tasty or something ready for the markets. Creating a variety of goods and combining them into better products for sale or for consumption in one of your life businesses.</p><h2 class=\"bb_tag\" ><strong>Persistent Progression</strong></h2><p class=\"bb_paragraph\" >Your crops will grow, people will buy your products and processors will refine your products while you're away, come back later for a big harvest or play an extended session and see what you can get done within the time!</p><h2 class=\"bb_tag\" ><strong>Personal Progression</strong></h2><p class=\"bb_paragraph\" >Your character levels up whenever you play, level up your character and unlock new vehicles, useful upgrades, outfits, and more! Your character progress stays with you, so you can take it along to any farm you visit. </p><h2 class=\"bb_tag\" ><strong>Helping Hands</strong></h2><p class=\"bb_paragraph\" >At your disposal, you have loyal FarmBots (beep-boop) wherever you want help on the farm or within your businesses, you can send in these fine gardeners to help you.</p><h2 class=\"bb_tag\" ><strong>Play how you want</strong></h2><p class=\"bb_paragraph\" >We want you to experience the game at your own pace. You won't be forced into a certain playstyle. If you want to enjoy solely the farming experience, you can! If you want to mix it up with running a Restaurant or Café using your own crops as ingredients, that's totally possible.</p><h2 class=\"bb_tag\" ><strong>Not just a Farm</strong></h2><p class=\"bb_paragraph\" >We're planning on creating several 'life' gameplay features, with the game shipping with the initial running a Culinary establishment (such as a Café, a Buffet or a Restaurant) and a Grocery Store &amp; Flowery Shoppe.</p><h2 class=\"bb_tag\" ><strong>Future Content</strong></h2><p class=\"bb_paragraph\" >During Early Access, we will work on community creation functionality to author your own voxel art to display on your farm, we'll provide a tool, a file format and hopefully steam workshop access to make this seamless.</p><p class=\"bb_paragraph\" ><span class=\"bb_img_ctn\"><img class=\"bb_img\" src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/8b0a1524fa5e25d91fb30aaeb2bea54d.avif?t=1790242343\" alt=\"\"data-big-src=https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras_big/8b0a1524fa5e25d91fb30aaeb2bea54d.webp?t=1790242343 width=1560 height=467 /></span></p><p class=\"bb_paragraph\" style=\"text-align: center\">Created by</p><p class=\"bb_paragraph\" ><span class=\"bb_img_ctn\"><img class=\"bb_img\" src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/fbf83b292fe9d7a0cff4d0560c2c7766.avif?t=1790242343\" alt=\"Logo\" width=1254 height=1254 /></span></p><p class=\"bb_paragraph\" ></p>",
+  "about_the_game": "<p class=\"bb_paragraph\" >Welcome to Farmion, a cozy voxel farming and life simulation game</p><p class=\"bb_paragraph\" >Design your farm how you want, including the terrain around it. Whether you prefer efficiency over aesthetics, you can try to efficiently explore and level up crops to find the perfect money maker. Or if you prefer to make your farm neat, we'll have a photo mode for you to create an aesthetically pleasing and relaxing farm. Farming combined with life sim gameplay, makes Farmion.</p><p class=\"bb_paragraph\" ></p><p class=\"bb_paragraph\" ><span class=\"bb_img_ctn\"><video class=\"bb_img\" autoplay muted loop playsinline poster=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/9d9209003abd8428f672cbed243eee3c.poster.avif?t=1790242343\" width=1160 height=302 ><source src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/9d9209003abd8428f672cbed243eee3c.webm?t=1790242343\" type=\"video/webm; codecs=vp9\"><source src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/9d9209003abd8428f672cbed243eee3c.mp4?t=1790242343\" type=\"video/mp4\"></video></span></p><h2 class=\"bb_tag\" ><strong>Farm alone or with friends</strong></h2><p class=\"bb_paragraph\" >Sometimes we want to enjoy a nice game on our own. You can progress your farm as a solo player, or opt to play co-op and play together with your friends. If you have a group of friends you really want to share one farm with, you can do so with custom save-game ownership rules</p><h2 class=\"bb_tag\" ><strong>Market your Inventory</strong></h2><p class=\"bb_paragraph\" >Take your goods and stock them on market shelves to sell to customers over time and earn Qbs; our currency to expand into the world of Processing, Fine Dining and Decorations.</p><h2 class=\"bb_tag\" ><strong>Processing Goods</strong></h2><p class=\"bb_paragraph\" >Create new processed materials with your ingredients, whether that's something tasty or something ready for the markets. Creating a variety of goods and combining them into better products for sale or for consumption in one of your life businesses.</p><h2 class=\"bb_tag\" ><strong>Persistent Progression</strong></h2><p class=\"bb_paragraph\" >Your crops will grow, people will buy your products and processors will refine your products while you're away, come back later for a big harvest or play an extended session and see what you can get done within the time!</p><h2 class=\"bb_tag\" ><strong>Personal Progression</strong></h2><p class=\"bb_paragraph\" >Your character levels up whenever you play, level up your character and unlock new vehicles, useful upgrades, outfits, and more! Your character progress stays with you, so you can take it along to any farm you visit. </p><h2 class=\"bb_tag\" ><strong>Helping Hands</strong></h2><p class=\"bb_paragraph\" >At your disposal, you have loyal FarmBots (beep-boop) wherever you want help on the farm or within your businesses, you can send in these fine gardeners to help you.</p><h2 class=\"bb_tag\" ><strong>Play how you want</strong></h2><p class=\"bb_paragraph\" >We want you to experience the game at your own pace. You won't be forced into a certain playstyle. If you want to enjoy solely the farming experience, you can! If you want to mix it up with running a Restaurant or Café using your own crops as ingredients, that's totally possible.</p><h2 class=\"bb_tag\" ><strong>Not just a Farm</strong></h2><p class=\"bb_paragraph\" >We're planning on creating several 'life' gameplay features, with the game shipping with the initial running a Culinary establishment (such as a Café, a Buffet or a Restaurant) and a Grocery Store &amp; Flowery Shoppe.</p><h2 class=\"bb_tag\" ><strong>Future Content</strong></h2><p class=\"bb_paragraph\" >During Early Access, we will work on community creation functionality to author your own voxel art to display on your farm, we'll provide a tool, a file format and hopefully steam workshop access to make this seamless.</p><p class=\"bb_paragraph\" ><span class=\"bb_img_ctn\"><img class=\"bb_img\" src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/8b0a1524fa5e25d91fb30aaeb2bea54d.avif?t=1790242343\" alt=\"\"data-big-src=https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras_big/8b0a1524fa5e25d91fb30aaeb2bea54d.webp?t=1790242343 width=1560 height=467 /></span></p><p class=\"bb_paragraph\" style=\"text-align: center\">Created by</p><p class=\"bb_paragraph\" ><span class=\"bb_img_ctn\"><img class=\"bb_img\" src=\"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/extras/fbf83b292fe9d7a0cff4d0560c2c7766.avif?t=1790242343\" alt=\"Logo\" width=1254 height=1254 /></span></p><p class=\"bb_paragraph\" ></p>",
+  "short_description": "Build your dream farm in a cozy voxel world, alone or together. Grow at your own pace with offline progression, helping hands, and relaxed mechanics designed to let you enjoy the farm your way.",
+  "supported_languages": "English<strong>*</strong><br><strong>*</strong>languages with full audio support",
+  "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/5c2906396ab83faefb31962f7bcbfe0219d69d61/header.jpg?t=1790242343",
+  "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/20fc682abf3bd06c3d36c1427df2296d3ca3ab41/capsule_231x87.jpg?t=1790242343",
+  "capsule_imagev5": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/20fc682abf3bd06c3d36c1427df2296d3ca3ab41/capsule_184x69.jpg?t=1790242343",
+  "website": "https://www.baerandhoggo.com/",
+  "pc_requirements": {
+    "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 10<br></li><li><strong>Processor:</strong> 12th Gen Intel(R) Core(TM) i7-12700<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> Nvidia GTX 1070 or similar<br></li><li><strong>Storage:</strong> 25 GB available space</li></ul>",
+    "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 11<br></li><li><strong>Processor:</strong> AMD Ryzen 9 5900HS<br></li><li><strong>Memory:</strong> 16 GB RAM<br></li><li><strong>Graphics:</strong> Nvidia RTX 2070 or similar<br></li><li><strong>Storage:</strong> 25 GB available space</li></ul>"
+  },
+  "mac_requirements": {
+    "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"></ul>",
+    "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"></ul>"
+  },
+  "linux_requirements": {
+    "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"></ul>",
+    "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"></ul>"
+  },
+  "developers": [
+    "Baer & Hoggo Games"
+  ],
+  "publishers": [
+    "Baer & Hoggo Games"
+  ],
+  "package_groups": [],
+  "platforms": {
+    "windows": true,
+    "mac": false,
+    "linux": false
+  },
+  "categories": [
+    {
+      "id": 2,
+      "description": "Single-player"
+    },
+    {
+      "id": 1,
+      "description": "Multi-player"
+    },
+    {
+      "id": 9,
+      "description": "Co-op"
+    },
+    {
+      "id": 38,
+      "description": "Online Co-op"
+    },
+    {
+      "id": 22,
+      "description": "Steam Achievements"
+    },
+    {
+      "id": 64,
+      "description": "Adjustable Text Size"
+    },
+    {
+      "id": 67,
+      "description": "Camera Comfort"
+    },
+    {
+      "id": 82,
+      "description": "#category_contrast_controls"
+    },
+    {
+      "id": 68,
+      "description": "Custom Volume Controls"
+    },
+    {
+      "id": 80,
+      "description": "#category_playable_at_your_own_pace"
+    },
+    {
+      "id": 74,
+      "description": "Playable without Timed Input"
+    },
+    {
+      "id": 79,
+      "description": "Save Anytime"
+    },
+    {
+      "id": 69,
+      "description": "Stereo Sound"
+    },
+    {
+      "id": 70,
+      "description": "Surround Sound"
+    },
+    {
+      "id": 23,
+      "description": "Steam Cloud"
+    },
+    {
+      "id": 62,
+      "description": "Family Sharing"
+    }
+  ],
+  "genres": [
+    {
+      "id": "25",
+      "description": "Adventure"
+    },
+    {
+      "id": "4",
+      "description": "Casual"
+    },
+    {
+      "id": "23",
+      "description": "Indie"
+    },
+    {
+      "id": "3",
+      "description": "RPG"
+    },
+    {
+      "id": "28",
+      "description": "Simulation"
+    },
+    {
+      "id": "70",
+      "description": "Early Access"
+    }
+  ],
+  "screenshots": [
+    {
+      "id": 0,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/b9ec3f6da8efe85d4c53b2e739eb11fd8fc55533/ss_b9ec3f6da8efe85d4c53b2e739eb11fd8fc55533.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/b9ec3f6da8efe85d4c53b2e739eb11fd8fc55533/ss_b9ec3f6da8efe85d4c53b2e739eb11fd8fc55533.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 1,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/85f7f5960687c9f4d2a7af53a9ec11c667e57e52/ss_85f7f5960687c9f4d2a7af53a9ec11c667e57e52.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/85f7f5960687c9f4d2a7af53a9ec11c667e57e52/ss_85f7f5960687c9f4d2a7af53a9ec11c667e57e52.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 2,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/abb7b8d8655d11a52caf7a0d91064dadb596d957/ss_abb7b8d8655d11a52caf7a0d91064dadb596d957.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/abb7b8d8655d11a52caf7a0d91064dadb596d957/ss_abb7b8d8655d11a52caf7a0d91064dadb596d957.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 3,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/070688efbba5c92d455c554e510be6a4df160304/ss_070688efbba5c92d455c554e510be6a4df160304.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/070688efbba5c92d455c554e510be6a4df160304/ss_070688efbba5c92d455c554e510be6a4df160304.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 4,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8b4a1f52ae147c7642d8171667dc5f1e0a20ab57/ss_8b4a1f52ae147c7642d8171667dc5f1e0a20ab57.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8b4a1f52ae147c7642d8171667dc5f1e0a20ab57/ss_8b4a1f52ae147c7642d8171667dc5f1e0a20ab57.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 5,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/e3a26472cb2505ccec29a97f0ef3b199e141ada2/ss_e3a26472cb2505ccec29a97f0ef3b199e141ada2.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/e3a26472cb2505ccec29a97f0ef3b199e141ada2/ss_e3a26472cb2505ccec29a97f0ef3b199e141ada2.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 6,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8871c626c4db853a0b7c40dc5830fa4f0cbb43e5/ss_8871c626c4db853a0b7c40dc5830fa4f0cbb43e5.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8871c626c4db853a0b7c40dc5830fa4f0cbb43e5/ss_8871c626c4db853a0b7c40dc5830fa4f0cbb43e5.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 7,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/693d4316c1a5d3c7653139392de5e942b36a727b/ss_693d4316c1a5d3c7653139392de5e942b36a727b.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/693d4316c1a5d3c7653139392de5e942b36a727b/ss_693d4316c1a5d3c7653139392de5e942b36a727b.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 8,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8b01948dc58e17a71a56fa2b9616ce92736a7e73/ss_8b01948dc58e17a71a56fa2b9616ce92736a7e73.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8b01948dc58e17a71a56fa2b9616ce92736a7e73/ss_8b01948dc58e17a71a56fa2b9616ce92736a7e73.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 9,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/c99bc0400cf784cc8e33f0a3d30e02ead067f9ed/ss_c99bc0400cf784cc8e33f0a3d30e02ead067f9ed.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/c99bc0400cf784cc8e33f0a3d30e02ead067f9ed/ss_c99bc0400cf784cc8e33f0a3d30e02ead067f9ed.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 10,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/9d280b074aca9ed803df4a5791e7e47a41b0bfe1/ss_9d280b074aca9ed803df4a5791e7e47a41b0bfe1.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/9d280b074aca9ed803df4a5791e7e47a41b0bfe1/ss_9d280b074aca9ed803df4a5791e7e47a41b0bfe1.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 11,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/377c3c6113740eb737a615d034bab2d364903138/ss_377c3c6113740eb737a615d034bab2d364903138.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/377c3c6113740eb737a615d034bab2d364903138/ss_377c3c6113740eb737a615d034bab2d364903138.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 12,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/a55a94ec76726ec692512c0cd53deed9427f1260/ss_a55a94ec76726ec692512c0cd53deed9427f1260.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/a55a94ec76726ec692512c0cd53deed9427f1260/ss_a55a94ec76726ec692512c0cd53deed9427f1260.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 13,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/6ba6129db4c8569f4b8b55dc9de060a752759659/ss_6ba6129db4c8569f4b8b55dc9de060a752759659.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/6ba6129db4c8569f4b8b55dc9de060a752759659/ss_6ba6129db4c8569f4b8b55dc9de060a752759659.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 14,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/3b1bb8cd50ca86a72742f68b56873d7e55f293f7/ss_3b1bb8cd50ca86a72742f68b56873d7e55f293f7.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/3b1bb8cd50ca86a72742f68b56873d7e55f293f7/ss_3b1bb8cd50ca86a72742f68b56873d7e55f293f7.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 15,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/54edc8d17063c114f4039ce12485b5a9c29cb7ae/ss_54edc8d17063c114f4039ce12485b5a9c29cb7ae.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/54edc8d17063c114f4039ce12485b5a9c29cb7ae/ss_54edc8d17063c114f4039ce12485b5a9c29cb7ae.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 16,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/45cfdf5e36043320af22bdfdad63ed6aa134095a/ss_45cfdf5e36043320af22bdfdad63ed6aa134095a.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/45cfdf5e36043320af22bdfdad63ed6aa134095a/ss_45cfdf5e36043320af22bdfdad63ed6aa134095a.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 17,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/088e2a47d4fd0d1ca914b5acaa82e7d681873b11/ss_088e2a47d4fd0d1ca914b5acaa82e7d681873b11.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/088e2a47d4fd0d1ca914b5acaa82e7d681873b11/ss_088e2a47d4fd0d1ca914b5acaa82e7d681873b11.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 18,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/c5fc88ea4d2dd048bafabc07031a3af3d3b19c2a/ss_c5fc88ea4d2dd048bafabc07031a3af3d3b19c2a.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/c5fc88ea4d2dd048bafabc07031a3af3d3b19c2a/ss_c5fc88ea4d2dd048bafabc07031a3af3d3b19c2a.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 19,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/fbdf46c3232c80c80878bb859712e6bf70592f71/ss_fbdf46c3232c80c80878bb859712e6bf70592f71.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/fbdf46c3232c80c80878bb859712e6bf70592f71/ss_fbdf46c3232c80c80878bb859712e6bf70592f71.1920x1080.jpg?t=1790242343"
+    },
+    {
+      "id": 20,
+      "path_thumbnail": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/111d6ad1561540514511a68a7b0de27e6a8ea0e0/ss_111d6ad1561540514511a68a7b0de27e6a8ea0e0.600x338.jpg?t=1790242343",
+      "path_full": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/111d6ad1561540514511a68a7b0de27e6a8ea0e0/ss_111d6ad1561540514511a68a7b0de27e6a8ea0e0.1920x1080.jpg?t=1790242343"
+    }
+  ],
+  "release_date": {
+    "coming_soon": true,
+    "date": "Q4 2026"
+  },
+  "support_info": {
+    "url": "https://www.baerandhoggo.com",
+    "email": "baerandhoggo@gmail.com"
+  },
+  "background": "https://store.akamai.steamstatic.com/images/storepagebackground/app/2426390?t=1790242343",
+  "background_raw": "https://store.akamai.steamstatic.com/images/storepagebackground/app/2426390?t=1790242343",
+  "content_descriptors": {
+    "ids": [],
+    "notes": null
+  },
+  "ratings": {
+    "dejus": {
+      "rating_generated": "1",
+      "rating": "l",
+      "required_age": "0",
+      "banned": "0",
+      "use_age_gate": "0",
+      "descriptors": ""
+    },
+    "steam_germany": {
+      "rating_generated": "1",
+      "rating": "0",
+      "required_age": "0",
+      "banned": "0",
+      "use_age_gate": "0",
+      "descriptors": ""
+    }
+  }
+}

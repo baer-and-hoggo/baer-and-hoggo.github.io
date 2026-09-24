@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 540" preserveAspectRatio="none" fill="none">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="600" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#55746b"/><stop offset=".4" stop-color="#28483f"/><stop offset="1" stop-color="#17372f"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="300" y2="340" gradientUnits="userSpaceOnUse"><stop stop-color="#efffff" stop-opacity=".13"/><stop offset=".65" stop-color="#efffff" stop-opacity="0"/></linearGradient>
+    <clipPath id="arch"><path d="M12 528V162A150 150 0 0 1 162 12H438A150 150 0 0 1 588 162V528Z"/></clipPath>
+  </defs>
+  <g clip-path="url(#arch)">
+    <path d="M12 12H588V528H12Z" fill="url(#glass)"/>
+    <path d="M293 12H307V173H588V187H307V528H293V187H12V173H293Z" fill="#15362e"/>
+    <path d="M295 12H305V175H588V185H305V528H295V185H12V175H295Z" fill="url(#frame)"/>
+    <path d="M297 12V176H17M307 177H583M297 187V526" stroke="#829a83" stroke-opacity=".65" stroke-width="2"/>
+    <path d="M35 35L233 35L35 295Z" fill="#fff" fill-opacity=".035"/>
+  </g>
+  <path d="M9 528V161A152 152 0 0 1 161 9H439A152 152 0 0 1 591 161V528Z" stroke="#123229" stroke-width="18"/>
+  <path d="M12 528V163A150 150 0 0 1 163 12H437A150 150 0 0 1 588 163V528" stroke="url(#frame)" stroke-width="11"/>
+  <path d="M19 523V163A144 144 0 0 1 163 19H437A144 144 0 0 1 581 163V523" stroke="#809380" stroke-opacity=".7" stroke-width="2"/>
+  <rect x="0" y="523" width="600" height="17" rx="2" fill="#17372f"/>
+  <path d="M2 525H598" stroke="#81947d" stroke-width="3"/>
+  <rect x="285" y="286" width="30" height="7" rx="2" fill="#b89c65" stroke="#655a3d" stroke-width="1"/>
+  <circle cx="288" cy="289.5" r="1" fill="#5e5038"/>
+  <circle cx="312" cy="289.5" r="1" fill="#5e5038"/>
+</svg>

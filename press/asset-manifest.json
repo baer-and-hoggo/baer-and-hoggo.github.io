@@ -1,0 +1,295 @@
+{
+  "game": "Farmion",
+  "credit": "Baer & Hoggo Games",
+  "verified": "2026-09-24",
+  "fact_sources": [
+    "https://store.steampowered.com/app/2426390/Farmion/",
+    "https://baerandhoggo.com/#farmion"
+  ],
+  "new_generated_images": false,
+  "assets": [
+    {
+      "file": "assets/screenshots/steam-00.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/b9ec3f6da8efe85d4c53b2e739eb11fd8fc55533/ss_b9ec3f6da8efe85d4c53b2e739eb11fd8fc55533.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "8dd8b0406c0e4b999d97c042637011f7624fd30bb9cd1e2ac8f7ec110ff74039",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "A tractor among the crops, with a windmill beyond the field."
+    },
+    {
+      "file": "assets/screenshots/steam-01.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/85f7f5960687c9f4d2a7af53a9ec11c667e57e52/ss_85f7f5960687c9f4d2a7af53a9ec11c667e57e52.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1025
+      ],
+      "sha256": "2dc12e98bda505d2c8963334ea62f28637079ec36a949babf1a9cc3656b60734",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-02.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/abb7b8d8655d11a52caf7a0d91064dadb596d957/ss_abb7b8d8655d11a52caf7a0d91064dadb596d957.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1025
+      ],
+      "sha256": "3e4d9b23b66e10676b5596a19b96262a5c4548b2dff0b80cb27e4516316e7f79",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-03.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/070688efbba5c92d455c554e510be6a4df160304/ss_070688efbba5c92d455c554e510be6a4df160304.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1027
+      ],
+      "sha256": "b43c7abbd7cec479a6a0d70f6535de636d589b6a69ccd57e94d350355338a0df",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-04.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8b4a1f52ae147c7642d8171667dc5f1e0a20ab57/ss_8b4a1f52ae147c7642d8171667dc5f1e0a20ab57.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1025
+      ],
+      "sha256": "b814b27e701530e8c1226a3d6a719c3955d77f44d15634b953777ac5ffd3ef00",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-05.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/e3a26472cb2505ccec29a97f0ef3b199e141ada2/ss_e3a26472cb2505ccec29a97f0ef3b199e141ada2.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "d1363fb422dc4ea64c6c5721d1769944a5584ebf51ef0bf1398f618da609e8d8",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "A farmer beside a colorful garden and pergola."
+    },
+    {
+      "file": "assets/screenshots/steam-06.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8871c626c4db853a0b7c40dc5830fa4f0cbb43e5/ss_8871c626c4db853a0b7c40dc5830fa4f0cbb43e5.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "95feb6e8acb1d492278d148c968b710e40d58a907fffcd228634aa72d8369301",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "Flower shop and supermarket exteriors beside planted borders."
+    },
+    {
+      "file": "assets/screenshots/steam-07.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/693d4316c1a5d3c7653139392de5e942b36a727b/ss_693d4316c1a5d3c7653139392de5e942b36a727b.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1023
+      ],
+      "sha256": "3ab2faae926ada73f2a4429637ec12b93f82247bf433253c50f2bf8ad73826cd",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "An in-development grocery interior, shown with the game interface."
+    },
+    {
+      "file": "assets/screenshots/steam-08.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/8b01948dc58e17a71a56fa2b9616ce92736a7e73/ss_8b01948dc58e17a71a56fa2b9616ce92736a7e73.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "f2b4751d768d7b5f8803d1ad12710b2427af5537bf67bf4cd758c94518a58685",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-09.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/c99bc0400cf784cc8e33f0a3d30e02ead067f9ed/ss_c99bc0400cf784cc8e33f0a3d30e02ead067f9ed.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1017
+      ],
+      "sha256": "a5266cebd9277a8cb300a9cc0746bb59621d804cbbc31663b0bcdfd34e937ab0",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "Orchard trees and a grain silo in the farm landscape."
+    },
+    {
+      "file": "assets/screenshots/steam-10.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/9d280b074aca9ed803df4a5791e7e47a41b0bfe1/ss_9d280b074aca9ed803df4a5791e7e47a41b0bfe1.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "08da2dde7393f1334ad66a3eebdf8531286ac10511c011a442bfd3a5c224402a",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-11.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/377c3c6113740eb737a615d034bab2d364903138/ss_377c3c6113740eb737a615d034bab2d364903138.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "ebcb7e566f02d4327aababf1223aaa7f614de1639b7e50d82ab36aa4e0a3f930",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "Red farm buildings in a snowy scene."
+    },
+    {
+      "file": "assets/screenshots/steam-12.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/a55a94ec76726ec692512c0cd53deed9427f1260/ss_a55a94ec76726ec692512c0cd53deed9427f1260.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "e0b9049ded5d95ba2e08f9c9820b31e43ca142c8f7f2d1a5248955542eb2622a",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-13.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/6ba6129db4c8569f4b8b55dc9de060a752759659/ss_6ba6129db4c8569f4b8b55dc9de060a752759659.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "c1666a2d5cfc3c8a718daf9a329a70d23038209cb4d3239764ae6f68014c1c36",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-14.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/3b1bb8cd50ca86a72742f68b56873d7e55f293f7/ss_3b1bb8cd50ca86a72742f68b56873d7e55f293f7.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1080
+      ],
+      "sha256": "dcc6b1d8b03decbc89e634a727ad2990b57c5f0d1208a684b5c80deb57b465bf",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "Sunflowers beside a pond and farm structures."
+    },
+    {
+      "file": "assets/screenshots/steam-15.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/54edc8d17063c114f4039ce12485b5a9c29cb7ae/ss_54edc8d17063c114f4039ce12485b5a9c29cb7ae.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1026
+      ],
+      "sha256": "85b3be1192ff03e3fd6e129695b6ac3d3cfa4c94601378b3ff2bdf86447dbd39",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-16.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/45cfdf5e36043320af22bdfdad63ed6aa134095a/ss_45cfdf5e36043320af22bdfdad63ed6aa134095a.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1025
+      ],
+      "sha256": "7d60c94a6e99c6000e44372319182c7c9d1e9efe94a68ef5e81fb4359fa9a769",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-17.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/088e2a47d4fd0d1ca914b5acaa82e7d681873b11/ss_088e2a47d4fd0d1ca914b5acaa82e7d681873b11.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1018
+      ],
+      "sha256": "e78068d22fee6f474a2b5ec602d3f9c812a79db18ceb587506055fab408fbd69",
+      "kind": "in-game screenshot",
+      "modifications": "none",
+      "caption": "A farmer in a dark hat and outfit outside a timber-framed building."
+    },
+    {
+      "file": "assets/screenshots/steam-18.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/c5fc88ea4d2dd048bafabc07031a3af3d3b19c2a/ss_c5fc88ea4d2dd048bafabc07031a3af3d3b19c2a.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1027
+      ],
+      "sha256": "3be5774665dc3ff881b228233c79eafdbee2dfca563431766d61097dda3a89b7",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-19.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/fbdf46c3232c80c80878bb859712e6bf70592f71/ss_fbdf46c3232c80c80878bb859712e6bf70592f71.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1024
+      ],
+      "sha256": "62c63e7c31466931d46170979ea43bed0fc7a3cc5bda368d6135d1384c31895b",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/screenshots/steam-20.jpg",
+      "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2426390/111d6ad1561540514511a68a7b0de27e6a8ea0e0/ss_111d6ad1561540514511a68a7b0de27e6a8ea0e0.1920x1080.jpg?t=1790242343",
+      "size": [
+        1920,
+        1024
+      ],
+      "sha256": "b73853e911878f52cbee3cbce652111ce421a20f0418d1d3d6095902952d673c",
+      "kind": "in-game screenshot",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/brand/farmion-logo.png",
+      "source": "https://baerandhoggo.com/assets/farmion-logo.png",
+      "size": [
+        1280,
+        720
+      ],
+      "sha256": "19c57e41931c774f49597f2c79d52e73bec91cc8f8d0ebe20ef45dffbee2850c",
+      "kind": "brand artwork",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/brand/studio-logo.png",
+      "source": "https://baerandhoggo.com/logo.png",
+      "size": [
+        1023,
+        1024
+      ],
+      "sha256": "9e88b2a4a0fb267e36417c6e0a00658483966bd36176440271d69dc597686724",
+      "kind": "brand artwork",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/brand/studio-mascot.png",
+      "source": "https://baerandhoggo.com/assets/bh-mascot.png",
+      "size": [
+        1019,
+        1024
+      ],
+      "sha256": "a8830d1fbaede8ab148fc2045133498a95eb7d8b719385471d6faf6986b03a7b",
+      "kind": "brand artwork",
+      "modifications": "none"
+    },
+    {
+      "file": "assets/brand/chicken.png",
+      "source": "https://baerandhoggo.com/assets/chicken.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "60857212431ccb54b325154d18599d90bc22ea2e564b718eecc472af6fdd5972",
+      "kind": "brand artwork",
+      "modifications": "none"
+    }
+  ]
+}

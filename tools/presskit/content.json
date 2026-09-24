@@ -1,0 +1,163 @@
+{
+  "title": "Farmion",
+  "edition": "September 2026",
+  "verified": "2026-09-24",
+  "studio": "Baer & Hoggo Games",
+  "contact": "baerandhoggo@gmail.com",
+  "steam": "https://store.steampowered.com/app/2426390/Farmion/",
+  "website": "https://baerandhoggo.com/#farmion",
+  "discord": "https://discord.gg/rBmkV9XXCw",
+  "youtube": "https://www.youtube.com/@BaerAndHoggo",
+  "headline": "Farmion. Press kit.",
+  "short": "Farmion is a cozy voxel farming and life simulation game for PC. Players build farms, plant crops, trees, and flowers, and run shops, alone or with friends. Crops, sales, and processing continue while players are away.",
+  "long": "Farmion is a cozy voxel farming and life simulation game by Baer & Hoggo Games. Players can shape the terrain, place crops, trees, and flowers, process ingredients, and sell goods in their own shops. The game also includes culinary businesses and floristry. Animal husbandry is planned to include animals and fish.\n\nFarmion supports solo play and online co-op. Crops grow, customers buy goods, and processors keep working while players are away. FarmBots can help with the work.\n\nFarm progress belongs to the save. Character progress belongs to each player, including cosmetics and small gameplay unlocks such as harvesting larger areas.\n\nThe two-person studio is developing Farmion alongside their jobs. The game is planned to enter Steam Early Access in Q4 2026, with player feedback helping guide development.",
+  "studio_copy": "Baer & Hoggo Games is a two-person studio based in the European Union. We’re working on Farmion alongside our jobs.",
+  "facts": [
+    [
+      "Developer / publisher",
+      "Baer & Hoggo Games"
+    ],
+    [
+      "Location",
+      "European Union"
+    ],
+    [
+      "Platform",
+      "Windows PC · Steam"
+    ],
+    [
+      "Planned release",
+      "Q4 2026 · Early Access"
+    ],
+    [
+      "Genre",
+      "Cozy farming & life simulation"
+    ],
+    [
+      "Play modes",
+      "Single-player & online co-op"
+    ],
+    [
+      "Language",
+      "English"
+    ],
+    [
+      "Proposed base price",
+      "9,95€ / US$10.95"
+    ]
+  ],
+  "features": [
+    [
+      "Farming",
+      "Place crops, trees, and flowers, and shape the terrain. Animal husbandry is planned to include animals and fish."
+    ],
+    [
+      "Offline progress",
+      "Crops grow, shops sell goods, and processors keep working between sessions."
+    ],
+    [
+      "Solo & co-op",
+      "Play solo or join friends in online co-op."
+    ],
+    [
+      "Businesses",
+      "Process ingredients into new products and stock your own shops."
+    ],
+    [
+      "FarmBots",
+      "Put FarmBots to work on the farm and in your businesses."
+    ],
+    [
+      "Progression",
+      "Farm progress belongs to the save. Character progress belongs to each player: cosmetics and small unlocks, such as harvesting larger areas."
+    ]
+  ],
+  "screenshots": [
+    {
+      "id": 0,
+      "name": "farm-tractor-and-windmill",
+      "title": "Tractor and crops",
+      "caption": "A tractor among the crops, with a windmill beyond the field.",
+      "category": "farm"
+    },
+    {
+      "id": 5,
+      "name": "farmer-flower-garden",
+      "title": "Farmer and flower garden",
+      "caption": "A farmer beside a colorful garden and pergola.",
+      "category": "life"
+    },
+    {
+      "id": 6,
+      "name": "flower-shop-and-supermarket",
+      "title": "Flower shop and supermarket",
+      "caption": "Flower shop and supermarket exteriors beside planted borders.",
+      "category": "shops"
+    },
+    {
+      "id": 7,
+      "name": "grocery-checkout-gameplay",
+      "title": "Grocery checkout",
+      "caption": "An in-development grocery interior, shown with the game interface.",
+      "category": "shops"
+    },
+    {
+      "id": 9,
+      "name": "orchard-and-grain-silo",
+      "title": "Orchard and grain silo",
+      "caption": "Orchard trees and a grain silo in the farm landscape.",
+      "category": "farm"
+    },
+    {
+      "id": 11,
+      "name": "red-barn-in-winter",
+      "title": "Farm buildings in winter",
+      "caption": "Red farm buildings in a snowy scene.",
+      "category": "farm"
+    },
+    {
+      "id": 14,
+      "name": "sunflowers-and-pond",
+      "title": "Sunflowers and pond",
+      "caption": "Sunflowers beside a pond and farm structures.",
+      "category": "life"
+    },
+    {
+      "id": 17,
+      "name": "farmer-outfit-closeup",
+      "title": "Farmer outfit",
+      "caption": "A farmer in a dark hat and outfit outside a timber-framed building.",
+      "category": "life"
+    }
+  ],
+  "pricing_note": "Proposed base prices. Planned launch discount: 15% for the first 8 days.",
+  "prices": [
+    [
+      "USD",
+      "$10.95"
+    ],
+    [
+      "GBP",
+      "£9.89"
+    ],
+    [
+      "EUR",
+      "9,95€"
+    ]
+  ],
+  "team": [
+    {
+      "name": "Jesse van Vliet",
+      "role": "Game Developer",
+      "country": "Netherlands",
+      "flag": "nl",
+      "linkedin": "https://www.linkedin.com/in/jesse-j-van-vliet/"
+    },
+    {
+      "name": "Kristo Hõrrak",
+      "role": "Game Developer",
+      "country": "Estonia",
+      "flag": "ee"
+    }
+  ]
+}
