@@ -22,6 +22,20 @@
   font-size:13px;
   white-space:nowrap
 }
+.fp-trailer-frame {
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  border-radius:5px;
+  background:#0b211b;
+  box-shadow:0 18px 45px #183c2f20;
+  display:block
+}
+.fp-trailer-note {
+  margin:15px 0 0;
+  font-size:12px;
+  color:var(--muted)
+}
 .fp-split {
   display:grid;
   grid-template-columns:1fr 1fr;
