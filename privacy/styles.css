@@ -1,0 +1,43 @@
+:root {
+  --paper: #f6f3e9;
+  --ink: #183c2f;
+  --muted: #5c6b5f;
+  --line: #cbd1bf;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.7 var(--font-body); }
+a { color: inherit; text-underline-offset: 4px; }
+a:focus-visible { outline: 3px solid #c78327; outline-offset: 4px; }
+.wrap { width: min(960px, calc(100% - 64px)); margin-inline: auto; }
+.skip-link { position: absolute; top: -100px; left: 16px; padding: 10px 14px; background: var(--ink); color: var(--paper); z-index: 5; }
+.skip-link:focus { top: 10px; }
+.site-header { border-bottom: 1px solid var(--line); }
+.header-inner, .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.header-inner { min-height: 82px; }
+.brand { font: 800 32px/1 var(--font-display); text-decoration: none; }
+.back-link { font-size: 14px; }
+.policy { padding-block: 64px 96px; }
+.policy-intro { max-width: 780px; padding-bottom: 50px; }
+.eyebrow { margin: 0 0 16px; font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+h1, h2 { font-family: var(--font-display); line-height: 1.15; letter-spacing: -.025em; }
+h1 { margin: 0 0 18px; font-size: clamp(44px, 8vw, 72px); }
+h2 { margin: 0 0 14px; font-size: clamp(26px, 4vw, 34px); }
+.lede { margin: 0; max-width: 700px; font-size: clamp(18px, 2.2vw, 21px); line-height: 1.55; }
+.updated { margin-top: 22px; color: var(--muted); font-size: 13px; }
+section { max-width: 780px; border-top: 1px solid var(--line); padding-block: 30px 24px; }
+section p, section ul { margin: 0 0 16px; }
+section li + li { margin-top: 12px; }
+section ul { padding-left: 24px; }
+section strong { color: var(--ink); }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.footer-inner { min-height: 82px; }
+@media (max-width: 600px) {
+  .wrap { width: calc(100% - 36px); }
+  .header-inner { min-height: 68px; }
+  .brand { font-size: 27px; }
+  .policy { padding-block: 44px 70px; }
+  .policy-intro { padding-bottom: 32px; }
+  section { padding-block: 26px 18px; }
+  .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 4px; padding-block: 20px; }
+}
