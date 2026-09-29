@@ -36,8 +36,8 @@
       <ul>
         <li><strong>No account.</strong> Mobo has no accounts and never asks for your name, email address or contacts.</li>
         <li><strong>On your device.</strong> Your puzzle progress, streaks, stickers, Story Mode stars and settings are saved only on your device. Uninstalling the app deletes them.</li>
-        <li><strong>Leaderboards.</strong> When you solve a daily puzzle on its day, Mobo sends your solve time, hint count, the puzzle and its level, and a random install ID (not linked to you) to our leaderboard server. We keep a one-way hash of your IP address for short-term rate limiting to stop spam. The results are only used to show how players placed. Leaderboards also include simulated "mochi-bot" players so a board is never empty.</li>
-        <li><strong>Ads.</strong> Mobo shows a short ad after every two or three daily puzzles, never in Story Mode or the past week, and never at all once you've bought any unlock. Ads are served by Google AdMob, which may collect your device's advertising ID, approximate location from your IP address, and ad interaction data to serve and measure ads.</li>
+        <li><strong>Leaderboards.</strong> When you solve a daily puzzle on its day, Mobo sends your solve time, hint count, the puzzle and its level, and a random install ID (not linked to you) to our leaderboard server. We store a one-way hash of your IP address with each score, used only to rate-limit spam. The results are only used to show how players placed. Leaderboards also include simulated "mochi-bot" players so a board is never empty.</li>
+        <li><strong>Ads.</strong> Mobo shows a short ad after every two or three daily puzzles, never in Story Mode or the past week, and never at all once you've bought any unlock. Ads are served by Google AdMob, which may collect your device's advertising ID, approximate location from your IP address, ad interaction data and diagnostic data to serve and measure ads and prevent fraud.</li>
         <li><strong>Purchases.</strong> Story Mode, the Past week, the Premium puzzles and the Full package are one-time purchases handled entirely by Google Play. We never see your payment details.</li>
         <li><strong>Notifications.</strong> If you allow it, Mobo schedules a local daily reminder on your device. No push service or server is involved.</li>
         <li><strong>Sharing.</strong> When you tap Share, Mobo creates a result card on your device and hands it to your phone's share sheet. Nothing is sent unless you choose an app to share with.</li>
@@ -67,7 +67,7 @@
 
     <section aria-labelledby="retention-title">
       <h2 id="retention-title">Storage and retention</h2>
-      <p>Local saves remain on your device until you remove them or uninstall Mobo. Leaderboard entries are anonymous and are kept to show daily results; IP hashes are only kept for short-term rate limiting. We keep support correspondence for as long as needed to address the request and any applicable legal obligations. Google and Cloudflare set their own retention periods for data they handle.</p>
+      <p>Local saves remain on your device until you remove them or uninstall Mobo. Leaderboard entries, including the IP hash stored with each one, are anonymous and are kept to show daily results. We keep support correspondence for as long as needed to address the request and any applicable legal obligations. Google and Cloudflare set their own retention periods for data they handle.</p>
     </section>
 
     <section aria-labelledby="rights-title">
