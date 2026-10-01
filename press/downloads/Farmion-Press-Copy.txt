@@ -13,38 +13,38 @@ Language: English
 Proposed base price: 9,95€ / US$10.95
 
 SHORT DESCRIPTION
-Farmion is a cozy voxel farming and life simulation game for PC. Players build farms, plant crops, trees, and flowers, and run shops, alone or with friends. Crops, sales, and processing continue while players are away.
+Farmion is a cozy voxel farming and life sim for PC. Grow crops, keep livestock and build a village with markets, shops and restaurants, alone or with friends in online co-op. Your farm keeps going while you're offline.
 
 FULL DESCRIPTION
-Farmion is a cozy voxel farming and life simulation game by Baer & Hoggo Games. Players can shape the terrain, place crops, trees, and flowers, process ingredients, and sell goods in their own shops. The game also includes culinary businesses and floristry. Players can also keep livestock, build villages with markets and processors, and furnish their own home.
+Farmion is a cozy voxel farming and life sim game by Baer & Hoggo Games, a two-person studio. Shape the land, plant crops, trees and flowers, and keep livestock through the seasons, with rain, snow and wind. Greenhouses let you grow all year round.
 
-Farmion supports solo play and online co-op. Crops grow, customers buy goods, and processors keep working while players are away. FarmBots can help with the work.
+Around the farm you build a village. Markets sell your produce over time, processors refine it into new goods and stockpiles grow your storage. Open a café, buffet or restaurant, a grocery store or a flower shop, each with its own skill tree, and let FarmBot drones help look after the fields.
 
-Farm progress belongs to the save. Character progress belongs to each player, including cosmetics and small gameplay unlocks such as harvesting larger areas.
+Play solo or with friends in online co-op. Everyone on a farm shares its farm level, while your own progress stays with you. Crops keep growing, seasons keep turning and markets keep selling while you're offline.
 
-The two-person studio is developing Farmion alongside their jobs. The game is planned to enter Steam Early Access in Q4 2026, with player feedback helping guide development.
+Farmion is planned to enter Early Access in Q4 2026.
 
 IN THE GAME
 landscaping, seasons & weather, crops, trees & flowers, livestock, farm quests, farmbot drones, villages & markets, processors, café, buffet & restaurant, grocery store, flower shop, your own home, stockpiles, farm levels, skill trees, greenhouses, offline progress, roads, lights & fences, decorations, pets, solo or co-op
 
 FEATURES
-Farming
-Place crops, trees, and flowers, and shape the terrain. Keep and care for livestock.
+Farm through the seasons
+Shape the land and plant crops, trees and flowers. Keep livestock and look after them. Rain, snow and wind change the farm through the year, and greenhouses let you grow in any season.
 
-Offline progress
-Crops grow, shops sell goods, and processors keep working between sessions.
+Build a village
+Markets sell your produce over time, processors refine it into new goods and stockpiles add storage. Nicer surroundings make buildings better, so a pretty market holds more stock.
 
-Solo & co-op
-Play solo or join friends in online co-op.
+Run your own businesses
+Cook dishes in a café, buffet or restaurant for the big money, sell raw produce fast in a grocery store, or arrange bouquets in a flower shop to earn prestige. Each business has its own skill tree.
 
-Businesses
-Process ingredients into new products and stock your own shops.
+Let the robots help
+Set up FarmBot drones to tend your fields, so you can spend your time where you want it.
 
-FarmBots
-Put FarmBots to work on the farm and in your businesses.
+Make it home
+Build and furnish your own house, then decorate the farm with roads, lights, fences, decorations and pets.
 
-Progression
-Farm progress belongs to the save. Character progress belongs to each player: cosmetics and small unlocks, such as harvesting larger areas.
+Farm together
+Play solo or with friends in online co-op. The farm level decides what everyone can build, quests push the farm forward, and your own progress extends your tractor's reach. The farm keeps going while you're offline.
 
 
 PROPOSED REGIONAL PRICING

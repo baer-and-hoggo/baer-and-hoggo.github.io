@@ -172,20 +172,16 @@ def make_pdf():
     leather(42, 40, 511, 66+ch)
     tape('in the game', 56, 54)
     chips(C['in_game'], 56, 92, 483)
-    for i, (title, body) in enumerate([
-        ('farm', 'Shape the land, plant crops, trees and flowers, and look after your livestock.'),
-        ('run shops', 'Open a café, buffet or restaurant, a grocery store or a flower shop.'),
-        ('play together', "Solo or online co-op. Crops grow and markets sell while you're away."),
-    ]):
-        top = 122 + ch + i*112
-        leather(42, top, 511, 98)
-        tape(title, 56, top+14, 13)
-        para(E(body), 56, top+46, 360, 10.5, 15.5, 'Body', PRESSED)
-    image(ROOT/'assets/brand/chicken.png', 452, 135 + ch, 80, 80)
-    top = 122 + ch + 3*112
-    leather(42, top, 511, 150)
-    tape('description', 56, top+14, 13)
-    para(E(C['long'].split('\n\n')[0]), 56, top+46, 483, 9.5, 14, 'Body', PRESSED)
+    row = 132
+    for i, (title, body) in enumerate(C['features']):
+        x = 42 + (i % 2)*261; top = 122 + ch + (i//2)*row
+        leather(x, top, 250, row - 12)
+        tape(title.lower(), x+14, top+14, 12)
+        para(E(body), x+14, top+44, 222, 9.3, 13.6, 'Body', PRESSED)
+    top = 122 + ch + 3*row
+    leather(42, top, 511, 764 - top)
+    tape('farmion', 56, top+14, 12)
+    para(E(C['short']), 56, top+44, 483, 9.8, 14.5, 'Body', PRESSED)
     cv.showPage()
 
     # 4 / Screenshots.

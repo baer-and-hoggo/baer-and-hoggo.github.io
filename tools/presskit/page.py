@@ -16,13 +16,38 @@ def icon(name):
     return f'<svg class="site-icon" aria-hidden="true" focusable="false"><use href="assets/ui-icons.svg#{name}"></use></svg>'
 
 
+def copyblock(label, body, plain, extra=''):
+    """A canvas block with a label and a copy button that copies `plain`, the text as an editor would paste it."""
+    return (f'<div class="fs-canvas pk-copy {extra}"><div class="pk-copy-head"><span class="pk-label">{label}</span>'
+            f'<button class="fs-strap small" data-copy-text="{E(plain)}">copy</button></div>{body}</div>')
+
+
 def page_html(C):
     steam, epic = C['steam'], C['epic']
-    facts = ''.join(f'<div><dt>{E(k)}</dt><dd>{E(v)}</dd></div>' for k, v in C['facts'])
-    patches = ''.join(f'<li>{E(item)}</li>' for item in C['in_game'])
-    long = ''.join(f'<p>{E(p)}</p>' for p in C['long'].split('\n\n'))
+    facts = copyblock('fact sheet',
+                      '<dl class="pk-facts">' + ''.join(f'<div><dt>{E(k)}</dt><dd>{E(v)}</dd></div>' for k, v in C['facts']) + '</dl>',
+                      '\n'.join(f'{k}: {v}' for k, v in C['facts']))
+    prices = copyblock('prices',
+                       f'<p>{E(C["pricing_note"])}</p><p class="pk-prices">' + ' · '.join(f'{E(code)} {E(price)}' for code, price in C['prices']) + '</p>',
+                       C['pricing_note'] + '\n' + '\n'.join(f'{code}: {price}' for code, price in C['prices']),
+                       'pk-pricing" id="pricing')
+    short = copyblock('short description', f'<p>{E(C["short"])}</p>', C['short'])
+    long = copyblock('long description', ''.join(f'<p>{E(p)}</p>' for p in C['long'].split('\n\n')), C['long'])
+    features = ''.join(copyblock(E(t.lower()), f'<p>{E(b)}</p>', f'{t}\n{b}', 'pk-feature') for t, b in C['features'])
+    features_all = '\n\n'.join(f'{t}\n{b}' for t, b in C['features'])
+    patches = copyblock('in the game',
+                        '<ul class="pk-patches">' + ''.join(f'<li>{E(item)}</li>' for item in C['in_game']) + '</ul>',
+                        '\n'.join(f'- {item}' for item in C['in_game']))
+    studio = copyblock('studio bio', f'<p>{E(C["studio_copy"])}</p>', C['studio_copy'])
+    link_rows = ([('Steam', steam), ('Epic Games Store', epic), ('Website', C['website']), ('Discord', C['discord'])]
+                 + [(x['name'], x['url']) for x in C['socials']])
+    links = copyblock('links',
+                      '<dl class="pk-facts">' + ''.join(
+                          f'<div><dt>{E(n)}</dt><dd><a href="{E(u)}" target="_blank" rel="noopener">{E(u.replace("https://", "").replace("www.", ""))}</a></dd></div>'
+                          for n, u in link_rows)
+                      + f'<div><dt>Press contact</dt><dd><a href="mailto:{C["contact"]}">{C["contact"]}</a></dd></div></dl>',
+                      '\n'.join(f'{n}: {u}' for n, u in link_rows) + f'\nPress contact: {C["contact"]}')
     socials = ''.join(f'<a class="fs-icon-link" href="{E(x["url"])}" aria-label="{E(x["name"])}" title="{E(x["name"].lower())}" target="_blank" rel="noopener">{icon(x["icon"])}</a>' for x in C['socials'])
-    prices = ''.join(f'<tr><th scope="row">{E(code)}</th><td>{E(price)}</td></tr>' for code, price in C['prices'])
 
     shots = []
     for s in C['screenshots']:
@@ -81,19 +106,15 @@ def page_html(C):
   <section class="fs-section" aria-labelledby="about-title"><div class="fs-flap">
     <h2 id="about-title" class="fs-tape">about</h2>
     <div class="pk-about">
-      <dl class="fs-canvas pk-facts">{facts}</dl>
-      <div class="pk-story">
-        <p class="pk-short" id="short-copy">{E(C['short'])}</p>
-        <div class="pk-copyrow"><button class="fs-strap small" data-copy="short-copy">copy short</button><button class="fs-strap small" data-copy="long-copy">copy full</button><span id="copy-status" class="fs-muted" role="status" aria-live="polite"></span></div>
-        <details class="fs-canvas"><summary>full description</summary><div id="long-copy">{long}</div></details>
-        <details class="fs-canvas" id="pricing"><summary>regional prices</summary><p>{E(C['pricing_note'])}</p><table><tbody>{prices}</tbody></table></details>
-      </div>
+      <div class="pk-col">{facts}{prices}</div>
+      <div class="pk-col">{short}{long}</div>
     </div>
   </div></section>
 
-  <section class="fs-section" aria-labelledby="ingame-title"><div class="fs-flap">
-    <h2 id="ingame-title" class="fs-tape">in the game</h2>
-    <ul class="pk-patches">{patches}</ul>
+  <section id="features" class="fs-section" aria-labelledby="features-title"><div class="fs-flap">
+    <div class="fs-flap-head"><h2 id="features-title" class="fs-tape">features</h2><button class="fs-strap small" data-copy-text="{E(features_all)}">copy all</button></div>
+    <div class="pk-features">{features}</div>
+    {patches}
   </div></section>
 
   <section class="fs-section" aria-labelledby="trailer-title"><div class="fs-flap">
@@ -113,7 +134,7 @@ def page_html(C):
 
   <section id="studio" class="fs-section" aria-labelledby="studio-title"><div class="fs-flap">
     <h2 id="studio-title" class="fs-tape">studio</h2>
-    <p>{E(C['studio_copy'])}</p>
+    {studio}
     <div class="pk-team">{team}</div>
   </div></section>
 
@@ -121,6 +142,7 @@ def page_html(C):
     <img src="assets/brand/chicken.png" alt="" width="1024" height="1024" loading="lazy">
     <div><h2 id="contact-title">Press contact</h2><a class="pk-email" href="mailto:{C['contact']}">{C['contact']}</a><div class="fs-socials">{socials}</div></div>
   </section>
+  <section class="fs-section" aria-label="Links"><div class="fs-flap">{links}</div></section>
 </main>
 
 <footer class="fs-footer"><div class="fs-wrap">

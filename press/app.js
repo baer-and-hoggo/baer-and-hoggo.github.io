@@ -15,20 +15,15 @@ document.querySelector('#lightbox-close').addEventListener('click',()=>dialog.cl
 document.querySelector('#previous').addEventListener('click',()=>showShot(selected-1));
 document.querySelector('#next').addEventListener('click',()=>showShot(selected+1));
 dialog.addEventListener('keydown',event=>{if(event.key==='ArrowRight'){event.preventDefault();showShot(selected+1)}if(event.key==='ArrowLeft'){event.preventDefault();showShot(selected-1)}});
-document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
-  const source=document.getElementById(button.dataset.copy);
-  const paragraphs=[...source.querySelectorAll('p')];
-  const text=paragraphs.length?paragraphs.map(p=>p.textContent.trim()).join('\n\n'):source.textContent.trim();
-  const status=document.querySelector('#copy-status');
-  try{await navigator.clipboard.writeText(text);status.textContent='copied'}
-  catch{
-    let field=document.querySelector('#copy-fallback');
-    if(!field){field=document.createElement('textarea');field.id='copy-fallback';field.className='copy-fallback';field.readOnly=true;field.setAttribute('aria-label','Press copy: select and copy');document.querySelector('.pk-story').append(field)}
-    field.value=text;field.focus();field.select();status.textContent='selected below, press ctrl+c';
-  }
+// Every copy button carries the plain text an editor would paste.
+document.querySelectorAll('[data-copy-text]').forEach(button=>button.addEventListener('click',async()=>{
+  const label=button.textContent;
+  try{await navigator.clipboard.writeText(button.dataset.copyText);button.textContent='copied';button.classList.add('copied')}
+  catch{button.textContent='select the text';}
+  setTimeout(()=>{button.textContent=label;button.classList.remove('copied')},1600);
 }));
 function revealLinkedPricing(){
-  if(location.hash==='#pricing'){const pricing=document.getElementById('pricing');pricing.open=true;pricing.scrollIntoView();}
+  if(location.hash==='#pricing'){document.getElementById('pricing').scrollIntoView();}
 }
 window.addEventListener('hashchange',revealLinkedPricing);
 revealLinkedPricing();
