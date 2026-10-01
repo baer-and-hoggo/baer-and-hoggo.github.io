@@ -22,10 +22,12 @@ These checks do not rewrite the page's claims.
 
 robots.txt explicitly permits the homepage and public pages for OAI-SearchBot,
 ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot and Perplexity-User.
-This preserves the initially unrestricted robots access. Cloudflare's existing
-content-signal explanation is managed at the edge and is preserved. No training
-policy is added or changed here. After any policy change, fetch the live
-robots.txt and public pages again: Cloudflare can affect the delivered response.
+This preserves the initially unrestricted robots access. The existing
+Cloudflare content-signal explanatory comments are retained in this file because
+Cloudflare stops supplying that preamble when an origin robots.txt exists. No
+content-signal permission or training restriction is added or changed. After any
+policy change, fetch the live robots.txt and public pages again: Cloudflare can
+affect the delivered response.
 
 Crawler definitions:
 
