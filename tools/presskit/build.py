@@ -47,7 +47,6 @@ for name, file, weight in [('Display', 'Baloo2.ttf', 800), ('Body', 'Nunito.ttf'
     font.save(font_data)
     font_data.seek(0)
     pdfmetrics.registerFont(TTFont(name, font_data))
-PANORAMA = ROOT.parent / 'assets' / 'hero.png'
 
 
 def make_pdf():
@@ -118,17 +117,17 @@ def make_pdf():
         text(f'farmion / press kit / {section}', 42, 808, 8, 'BodyBold', MUTED)
         text(f'{page} / 5', 527, 808, 8, 'Body', MUTED)
 
-    # 1 / Cover: sky, logo, panorama, and the facts on a leather strap.
+    # 1 / Cover: sky, logo, screenshots, and the facts on a leather strap.
     rect(0, 0, W, H, CREAM)
-    pano = W*1240/3840
-    rect(0, 0, W, 428, SKY)
+    rect(0, 0, W, 262, SKY)
     logo(122, 48, 351)
     centered('A cozy voxel farming game. Grow crops, run little shops', 150, 13, 'BodyBold')
     centered('and play with friends.', 168, 13, 'BodyBold')
     tw = pdfmetrics.stringWidth('press kit', 'Display', 18) + 24
     rect((W-tw)/2, 198, tw, 27, TAPE, 1.5); centered('press kit', 202, 18, 'Display', TAPE_INK)
-    image(PANORAMA, 0, 428-pano, W, pano)
-    pocket(ROOT/'assets/screenshots/steam-00.jpg', 42, 446, 511, 291)
+    pocket(ROOT/'assets/screenshots/steam-00.jpg', 42, 300, 511, 291)
+    pocket(ROOT/'assets/screenshots/steam-06.jpg', 42, 608, 250, 130)
+    pocket(ROOT/'assets/screenshots/steam-05.jpg', 303, 608, 250, 130)
     leather(42, 752, 511, 46)
     for i, (label, value) in enumerate([('release', 'Q4 2026 · Early Access'), ('platform', 'Windows PC'), ('play', 'Solo & online co-op')]):
         text(label, 60+i*170, 761, 7.5, 'BodyBold', STITCH)
@@ -214,23 +213,21 @@ def make_pdf():
         image(ROOT/'assets/brand'/file, x+12, 110, 89, 122)
         text(label, x+2, 256, 9, 'BodyBold', PRESSED)
     para('Transparent PNGs in Farmion-Logos.zip. Please keep the original colours and proportions.', 56, 290, 483, 9.5, 14, 'Body', STITCH)
-    pano = W*1240/3840
-    rect(0, 356, W, 300, SKY)
-    image(PANORAMA, 0, 656-pano, W, pano)
+    rect(0, 356, W, 190, SKY)
     image(ROOT/'assets/brand/chicken.png', 262, 370, 70, 70)
     centered('Press contact', 446, 26, 'Display')
     centered(C['contact'], 480, 16, 'BodyBold')
     tw = pdfmetrics.stringWidth(C['contact'], 'BodyBold', 16)
     cv.linkURL('mailto:'+C['contact'], ((W-tw)/2, H-500, (W+tw)/2, H-478), relative=0, thickness=0)
-    leather(42, 672, 511, 120)
-    tape('links', 56, 684, 13)
+    leather(42, 566, 511, 120)
+    tape('links', 56, 578, 13)
     x = 58
     for label, url in [('steam', STEAM), ('epic games store', C['epic']), ('discord', C['discord']), ('website', C['website'])]:
-        x += link(label, url, x, 718, 11, THREAD) + 20
+        x += link(label, url, x, 612, 11, THREAD) + 20
     x = 58
     for social in C['socials']:
-        x += link(social['name'].lower(), social['url'], x, 740, 11, THREAD) + 20
-    para('Farmion is in development; features and visuals may change.', 58, 766, 470, 8.5, 12, 'Body', STITCH)
+        x += link(social['name'].lower(), social['url'], x, 634, 11, THREAD) + 20
+    para('Farmion is in development; features and visuals may change.', 58, 660, 470, 8.5, 12, 'Body', STITCH)
     cv.save()
 
 

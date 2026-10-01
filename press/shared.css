@@ -2,7 +2,7 @@
  * Shared Farmion look for the game page and the press kit.
  * Cut from the game's own UI kit (WebUI/src/styles.css --kit-*): bridle leather with a
  * stitched seam, sewn-on name tapes, dark tool pockets for pictures and brass for the one
- * thing a group is for. The sky and farm panorama sit above it.
+ * thing a group is for, under a plain sky header.
  */
 .farmion-site {
   --sky:#a3def4;
@@ -52,12 +52,11 @@
 .fs-skip { position:absolute; left:16px; top:-80px; z-index:20; padding:10px 14px; background:var(--ink); color:var(--cream); border-radius:10px; }
 .fs-skip:focus { top:12px; }
 
-/* Sky header with the farm panorama on its bottom edge. */
+/* Sky header. */
 .fs-sky { position:relative; background:var(--sky); text-align:center; overflow:hidden; }
 .fs-toplinks { display:flex; justify-content:flex-end; align-items:center; gap:10px; padding:16px 0 0; }
 .farmion-site .fs-toplink-label { margin-right:auto; }
-.fs-hero { position:relative; z-index:1; }
-.fs-panorama { display:block; width:100%; min-width:900px; height:auto; position:relative; left:50%; transform:translateX(-50%); margin-top:calc(max(100vw, 900px) * -0.12); pointer-events:none; user-select:none; }
+.fs-hero { position:relative; z-index:1; padding-bottom:64px; }
 .fs-sky::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:22px; background:var(--cream); border-radius:22px 22px 0 0; }
 
 /* Leather: a stitched flap. Everything the page shows sits on one. */

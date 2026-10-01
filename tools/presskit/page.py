@@ -75,7 +75,6 @@ def page_html(C):
     </div>
     <p class="pk-credit">Please credit Baer &amp; Hoggo Games.</p>
   </div>
-  <img class="fs-panorama" src="../assets/hero.png" alt="" width="3840" height="1240" aria-hidden="true">
 </header>
 
 <main id="main" class="fs-wrap">
