@@ -1,0 +1,22 @@
+/* The Farmion privacy page. Materials come from press/shared.css; privacy/styles.css stays with the Mobo page. */
+.farmion-site .pv-title { display:flex; flex-direction:column; align-items:center; margin:10px 0 18px; }
+.pv-logo { display:flow-root; width:min(320px,70%); aspect-ratio:1210/308; overflow:clip; overflow-clip-margin:12px; }
+.pv-logo img { display:block; width:105.79%; max-width:none; margin:-17.02% 0 0 -2.89%; filter:drop-shadow(0 5px 0 rgb(59 42 30 / 18%)); }
+.pv-title .fs-tape { margin:12px 0 0; font-size:24px; }
+.pv-lede { max-width:620px; margin:0 auto 10px!important; font-size:18px; font-weight:700; line-height:1.5; }
+.pv-updated { margin:0!important; color:rgb(59 42 30 / 66%); font-size:14px; font-weight:700; }
+.pv-main { padding:22px 0 8px; }
+.pv-text { padding:6px 28px; font-size:16px; line-height:1.7; }
+.pv-text section { padding:22px 0; border-bottom:1px dashed rgb(233 220 188 / 24%); scroll-margin-top:16px; }
+.pv-text section:last-child { border-bottom:0; }
+.pv-text h2 { margin:0 0 10px; color:var(--kit-thread); font-size:24px; }
+.pv-text p { margin:0 0 12px; }
+.pv-text ul { margin:0 0 12px; padding-left:22px; }
+.pv-text li + li { margin-top:10px; }
+.pv-text strong { color:rgb(255 244 224); }
+.pv-text a { color:var(--kit-thread); }
+@media (max-width:600px) {
+  .pv-text { padding:4px 16px; font-size:15px; }
+  .pv-text h2 { font-size:21px; }
+  .pv-lede { font-size:16px; }
+}

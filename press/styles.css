@@ -1,5 +1,5 @@
 /* The press kit page. Materials come from shared.css. */
-.pk-title { display:flex; flex-direction:column; align-items:center; gap:2px; margin:14px 0 22px; }
+.farmion-site .pk-title { display:flex; flex-direction:column; align-items:center; gap:2px; margin:14px 0 22px; }
 .pk-logo-link { display:flow-root; width:min(400px,80%); aspect-ratio:1210/308; overflow:clip; overflow-clip-margin:12px; }
 .pk-logo-link img { display:block; width:105.79%; max-width:none; margin:-17.02% 0 0 -2.89%; filter:drop-shadow(0 5px 0 rgb(59 42 30 / 18%)); }
 .pk-title .fs-tape { margin:10px 0 6px; font-size:24px; }
