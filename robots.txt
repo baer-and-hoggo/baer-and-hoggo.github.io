@@ -1,0 +1,14 @@
+# Public pages remain accessible to search engines.
+User-agent: *
+Allow: /
+
+# Live-answer search and user-requested page retrieval.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+
+Sitemap: https://baerandhoggo.com/sitemap.xml
