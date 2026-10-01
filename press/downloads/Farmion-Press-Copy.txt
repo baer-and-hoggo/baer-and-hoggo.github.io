@@ -5,7 +5,7 @@ Facts checked: 2026-09-24
 FACT SHEET
 Developer / publisher: Baer & Hoggo Games
 Location: European Union
-Platform: Windows PC · Steam
+Platform: Windows PC · Steam & Epic Games Store
 Planned release: Q4 2026 · Early Access
 Genre: Cozy farming & life simulation
 Play modes: Single-player & online co-op
@@ -16,7 +16,7 @@ SHORT DESCRIPTION
 Farmion is a cozy voxel farming and life simulation game for PC. Players build farms, plant crops, trees, and flowers, and run shops, alone or with friends. Crops, sales, and processing continue while players are away.
 
 FULL DESCRIPTION
-Farmion is a cozy voxel farming and life simulation game by Baer & Hoggo Games. Players can shape the terrain, place crops, trees, and flowers, process ingredients, and sell goods in their own shops. The game also includes culinary businesses and floristry. Animal husbandry is planned to include animals and fish.
+Farmion is a cozy voxel farming and life simulation game by Baer & Hoggo Games. Players can shape the terrain, place crops, trees, and flowers, process ingredients, and sell goods in their own shops. The game also includes culinary businesses and floristry. Players can also keep livestock, build villages with markets and processors, and furnish their own home.
 
 Farmion supports solo play and online co-op. Crops grow, customers buy goods, and processors keep working while players are away. FarmBots can help with the work.
 
@@ -24,9 +24,12 @@ Farm progress belongs to the save. Character progress belongs to each player, in
 
 The two-person studio is developing Farmion alongside their jobs. The game is planned to enter Steam Early Access in Q4 2026, with player feedback helping guide development.
 
+IN THE GAME
+landscaping, seasons & weather, crops, trees & flowers, livestock, farm quests, farmbot drones, villages & markets, processors, café, buffet & restaurant, grocery store, flower shop, your own home, stockpiles, farm levels, skill trees, greenhouses, offline progress, roads, lights & fences, decorations, pets, solo or co-op
+
 FEATURES
 Farming
-Place crops, trees, and flowers, and shape the terrain. Animal husbandry is planned to include animals and fish.
+Place crops, trees, and flowers, and shape the terrain. Keep and care for livestock.
 
 Offline progress
 Crops grow, shops sell goods, and processors keep working between sessions.
@@ -63,9 +66,14 @@ baerandhoggo@gmail.com
 
 OFFICIAL LINKS
 https://store.steampowered.com/app/2426390/Farmion/
+https://store.epicgames.com/p/farmion-f68e22
 https://baerandhoggo.com/#farmion
-https://discord.gg/rBmkV9XXCw
-https://www.youtube.com/@BaerAndHoggo
+https://discord.gg/mbnb2mC4K5
+X: https://x.com/BaerAndHoggo
+TikTok: https://www.tiktok.com/@baerandhoggo
+Instagram: https://www.instagram.com/baerandhoggo.games/
+YouTube: https://www.youtube.com/@BaerAndHoggo
+Reddit: https://www.reddit.com/r/farmion/
 
 DEVELOPMENT STATUS
 Farmion is in development and planned to enter Steam Early Access in Q4 2026. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.

@@ -17,6 +17,8 @@
     dialog.showModal();
   }));
   document.getElementById('farmion-lightbox-close').addEventListener('click', () => dialog.close());
+  document.getElementById('farmion-lightbox-prev').addEventListener('click', () => show(selected - 1));
+  document.getElementById('farmion-lightbox-next').addEventListener('click', () => show(selected + 1));
   dialog.addEventListener('keydown', event => {
     if (event.key === 'ArrowRight') { event.preventDefault(); show(selected + 1); }
     if (event.key === 'ArrowLeft') { event.preventDefault(); show(selected - 1); }

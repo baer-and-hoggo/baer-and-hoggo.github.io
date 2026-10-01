@@ -1,262 +1,154 @@
-/* Shared layout and type for the game and press pages. */
+/*
+ * Shared Farmion look for the game page and the press kit.
+ * Cut from the game's own UI kit (WebUI/src/styles.css --kit-*): bridle leather with a
+ * stitched seam, sewn-on name tapes, dark tool pockets for pictures and brass for the one
+ * thing a group is for. The sky and farm panorama sit above it.
+ */
 .farmion-site {
-  --paper:#f6f3e9;
-  --ink:#183c2f;
-  --muted:#5c6b5f;
-  --line:#cbd1bf;
-  --pale:#e8ecde;
-  --lime:#d9e9a8;
-  --white:#fffef9;
-  background:var(--paper)!important;
+  --sky:#a3def4;
+  --cream:#f8efd9;
+  --ink:#3b2a1e;
+  --muted:#7a6250;
+  --kit-hide:
+    repeating-linear-gradient(74deg, rgb(255 214 168 / 4%) 0 1px, transparent 1px 7px),
+    radial-gradient(72% 54% at 24% 6%, rgb(255 206 150 / 12%), transparent 66%),
+    linear-gradient(166deg, #6a3f27, #4a2a1a 58%, #301a10);
+  --kit-hide-shadow: 0 14px 26px rgb(60 35 15 / 30%), inset 0 0 0 1px rgb(0 0 0 / 46%), inset 0 2px 0 rgb(255 206 150 / 16%);
+  --kit-stitch: rgb(233 220 188 / 38%);
+  --kit-pocket: linear-gradient(160deg, #4a5140, #333a2d 62%, #262c21);
+  --kit-pocket-shadow: inset 0 0 0 1px rgb(0 0 0 / 46%), inset 0 2px 4px rgb(0 0 0 / 40%), 0 1px 0 rgb(255 206 150 / 14%);
+  --kit-canvas:
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 8%) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(0deg, rgb(0 0 0 / 8%) 0 1px, transparent 1px 3px),
+    linear-gradient(164deg, #454b3c, #363c2f 62%, #2b3025);
+  --kit-canvas-shadow: inset 0 0 0 1px rgb(0 0 0 / 42%), inset 0 2px 5px rgb(0 0 0 / 32%);
+  --kit-tape: linear-gradient(180deg, #f2e9cf, #ddd0ac);
+  --kit-tape-shadow: 0 2px 4px rgb(0 0 0 / 34%), inset 0 0 0 1px rgb(90 62 30 / 26%);
+  --kit-tape-ink: #33291b;
+  --kit-brass-lit: #e2c079;
+  --kit-brass-deep: #8c6c26;
+  --kit-brass-plate: linear-gradient(180deg, #f4dda0, var(--kit-brass-lit) 54%, var(--kit-brass-deep));
+  --kit-brass-rivet: radial-gradient(circle at 34% 28%, #f4dda0, var(--kit-brass-lit) 54%, var(--kit-brass-deep));
+  --kit-brass-shadow: 0 2px 3px rgb(0 0 0 / 40%), inset 0 0 0 1px rgb(0 0 0 / 26%);
+  --kit-brass-ink: #3b2b09;
+  --kit-pressed-ink: rgb(255 226 186 / 86%);
+  --kit-thread: #ffd98a;
+  --radius:18px;
+  --radius-xs:7px;
+  background:var(--cream)!important;
   color:var(--ink)!important;
-  font:400 16px/1.65 var(--font-body);
+  font:400 17px/1.6 var(--font-body);
+  margin:0;
 }
-.farmion-site :is(.fp-wrap,.wrap) {
-  width:min(1280px,calc(100% - 96px));
-  margin-inline:auto;
-}
-.farmion-site :is(.fp-nav,.topbar) {
-  border-bottom:1px solid var(--line);
-  background:var(--paper);
-}
-.farmion-site :is(.fp-nav-inner,.nav) {
-  min-height:86px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:24px;
-}
-.farmion-site :is(.fp-brand,.wordmark) {
-  position:relative;
-  display:block;
-  flex:none;
-  width:187px;
-  height:52px;
-  overflow:hidden;
-}
-.farmion-site :is(.fp-brand,.wordmark) img {
-  position:absolute;
-  width:197px;
-  max-width:none;
-  height:auto;
-  top:-28px;
-  left:-5px;
-  filter:none;
-}
-.site-links { display:flex; align-items:center; gap:8px; }
-.farmion-site .site-nav-link {
-  position:relative;
-  display:grid;
-  place-items:center;
-  width:44px;
-  height:44px;
-  border:1px solid transparent;
-  border-radius:6px;
-  color:var(--ink);
-  text-decoration:none;
-}
-.site-nav-link:hover,.site-nav-link[aria-current="page"] { background:var(--pale); }
-.farmion-site .site-nav-link-steam { border-color:var(--ink); }
+.farmion-site *, .farmion-site *::before, .farmion-site *::after { box-sizing:border-box; }
+.farmion-site img { max-width:100%; height:auto; }
+.farmion-site a { color:inherit; text-underline-offset:4px; }
+.farmion-site :focus-visible { outline:3px solid #e9573f; outline-offset:3px; }
+.farmion-site h1, .farmion-site h2, .farmion-site h3 { font-family:var(--font-display); font-weight:800; line-height:1.15; margin:0; }
+.farmion-site p { margin:0 0 12px; }
+.farmion-site p:last-child { margin-bottom:0; }
+
+.fs-wrap { width:min(1080px,calc(100% - 32px)); margin-inline:auto; }
+.fs-skip { position:absolute; left:16px; top:-80px; z-index:20; padding:10px 14px; background:var(--ink); color:var(--cream); border-radius:10px; }
+.fs-skip:focus { top:12px; }
+
+/* Sky header with the farm panorama on its bottom edge. */
+.fs-sky { position:relative; background:var(--sky); text-align:center; overflow:hidden; }
+.fs-toplinks { display:flex; justify-content:flex-end; align-items:center; gap:10px; padding:16px 0 0; }
+.farmion-site .fs-toplink-label { margin-right:auto; }
+.fs-hero { position:relative; z-index:1; }
+.fs-panorama { display:block; width:100%; min-width:900px; height:auto; position:relative; left:50%; transform:translateX(-50%); margin-top:calc(max(100vw, 900px) * -0.12); pointer-events:none; user-select:none; }
+.fs-sky::after { content:""; position:absolute; left:0; right:0; bottom:-1px; height:22px; background:var(--cream); border-radius:22px 22px 0 0; }
+
+/* Leather: a stitched flap. Everything the page shows sits on one. */
+.fs-flap { position:relative; padding:20px; border-radius:var(--radius); background:var(--kit-hide); box-shadow:var(--kit-hide-shadow); color:var(--kit-pressed-ink); }
+.fs-flap::before { content:""; position:absolute; inset:6px; border:2px dashed var(--kit-stitch); border-radius:calc(var(--radius) - 6px); pointer-events:none; }
+.fs-flap > * { position:relative; }
+.fs-flap a { color:var(--kit-thread); }
+
+/* A name tape sewn across the top of a flap. */
+.farmion-site .fs-tape { display:inline-block; margin:0 0 16px; padding:3px 16px; border-radius:2px; background:var(--kit-tape); box-shadow:var(--kit-tape-shadow); color:var(--kit-tape-ink); font:800 22px/1.25 var(--font-display); }
+.fs-flap-head { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 16px; margin-bottom:16px; }
+.farmion-site .fs-flap-head .fs-tape { margin:0; }
+
+/* A dark tool pocket holding a picture, with brass rivets in two corners. */
+.fs-pocket { position:relative; padding:8px; border-radius:var(--radius-xs); background:var(--kit-pocket); box-shadow:var(--kit-pocket-shadow); }
+.fs-pocket::before, .fs-pocket::after { content:""; position:absolute; top:-4px; width:9px; height:9px; border-radius:50%; background:var(--kit-brass-rivet); box-shadow:var(--kit-brass-shadow); z-index:1; }
+.fs-pocket::before { left:-4px; }
+.fs-pocket::after { right:-4px; }
+.fs-pocket > img, .fs-pocket > iframe, .fs-pocket > button > img { display:block; width:100%; border-radius:4px; }
+
+/* Waxed canvas for text and facts. */
+.fs-canvas { padding:14px 16px; border-radius:var(--radius-xs); background:var(--kit-canvas); box-shadow:var(--kit-canvas-shadow); color:rgb(240 236 220 / 90%); }
+
+/* Brass for the one thing a group is for; leather straps for the rest. */
+.fs-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+/* Buttons in a row share one width so near-equal labels line up. */
+.farmion-site .fs-actions > :is(.fs-brass,.fs-strap) { min-width:236px; justify-content:center; }
+.farmion-site :is(.fs-brass,.fs-strap) { display:inline-flex; align-items:center; gap:9px; padding:10px 24px; border:0; border-radius:var(--radius-xs); font:800 20px/1.2 var(--font-display); text-decoration:none; cursor:pointer; transition:transform .12s, filter .12s; }
+.fs-brass { background:var(--kit-brass-plate); box-shadow:var(--kit-brass-shadow), 0 4px 0 #6b5018; color:var(--kit-brass-ink)!important; }
+.fs-strap { position:relative; background:var(--kit-hide); box-shadow:var(--kit-hide-shadow), 0 4px 0 #2a170c; color:var(--kit-pressed-ink)!important; }
+.fs-strap::before { content:""; position:absolute; inset:4px; border:1.5px dashed var(--kit-stitch); border-radius:4px; pointer-events:none; }
+.fs-brass:hover, .fs-strap:hover { filter:brightness(1.08); transform:translateY(-1px); }
+.fs-brass:active, .fs-strap:active { transform:translateY(3px); }
+.fs-brass .site-icon, .fs-strap .site-icon { width:20px; height:20px; }
+.fs-strap.small, .fs-brass.small { padding:7px 16px; font-size:17px; }
+
+.farmion-site .fs-icon-link { position:relative; display:inline-grid; place-items:center; width:44px; height:44px; border-radius:10px; background:var(--kit-hide); box-shadow:var(--kit-hide-shadow); color:var(--kit-pressed-ink); }
+.fs-icon-link::before { content:""; position:absolute; inset:4px; border:1.5px dashed var(--kit-stitch); border-radius:7px; }
+.fs-icon-link:hover { filter:brightness(1.15); }
+.fs-icon-link .site-icon { width:21px; height:21px; }
+
+.fs-socials { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:14px; }
+.fs-section { padding:22px 0; }
+.fs-muted { color:rgb(255 226 186 / 62%); font-size:15px; }
+
+/* Screenshot pockets. */
+.fs-shots { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr)); gap:18px; margin:0; padding:0; list-style:none; }
+.fs-shot { margin:0; }
+.fs-shot button { display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in; }
+.fs-shot img { aspect-ratio:16/9; object-fit:cover; }
+.fs-shot figcaption { display:flex; justify-content:space-between; gap:10px; padding:8px 2px 0; color:var(--kit-pressed-ink); font-size:15px; font-weight:700; }
+
+/* Lightbox, cut from the same leather. */
+.fs-lightbox { width:min(1200px,calc(100% - 24px)); padding:16px; border:0; border-radius:var(--radius); background:var(--kit-hide); box-shadow:var(--kit-hide-shadow); color:var(--kit-pressed-ink); }
+.fs-lightbox::backdrop { background:rgb(30 18 10 / 74%); }
+.fs-lightbox img { display:block; width:100%; height:auto; max-height:76vh; object-fit:contain; border-radius:6px; background:#262c21; }
+.fs-lightbox-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.farmion-site .fs-lightbox-bar .fs-tape { margin:0; font-size:19px; }
+.fs-lightbox-bar > div { display:flex; flex-wrap:wrap; gap:8px; }
+
+/* Footer. */
+.fs-footer { margin-top:24px; padding:26px 0 36px; color:var(--muted); font-size:15px; }
+.fs-footer .fs-wrap { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 24px; }
+.fs-footer nav { display:flex; flex-wrap:wrap; gap:6px 20px; }
+.fs-footer a { font-weight:700; color:var(--ink); }
+
+/* Icon and flag utilities, also used by the studio landing page. */
 .site-icon { width:20px; height:20px; display:block; flex:none; }
 .site-text-link { display:inline-flex; align-items:center; gap:7px; }
 .site-text-link .site-icon { width:17px; height:17px; }
 .site-identity { display:flex; align-items:center; flex-wrap:wrap; gap:14px; }
 .site-countries { display:inline-flex; align-items:center; flex-wrap:wrap; gap:14px; }
 .site-countries>span { display:inline-flex; align-items:center; gap:6px; }
-.site-flag { display:inline-block; width:20px; height:14px; flex:none; border-radius:1px; box-shadow:0 0 0 1px #183c2f20; vertical-align:middle; }
-.site-nav-link .site-icon { width:22px; height:22px; }
-.site-nav-label {
-  position:absolute;
-  right:0;
-  top:calc(100% + 8px);
-  padding:5px 9px;
-  border-radius:4px;
-  background:var(--ink);
-  color:var(--paper);
-  font:600 12px/1.4 var(--font-body);
-  white-space:nowrap;
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-  z-index:10;
+.site-flag { display:inline-block; width:20px; height:14px; flex:none; border-radius:2px; box-shadow:0 0 0 1px #3b2a1e30; vertical-align:middle; }
+
+@media (max-width:600px) {
+  .farmion-site { font-size:16px; }
+  .fs-section { padding:12px 0; }
+  .fs-flap { padding:16px 12px 14px; }
+  .farmion-site .fs-tape { font-size:19px; margin-bottom:12px; }
+  .farmion-site :is(.fs-brass,.fs-strap) { padding:9px 18px; font-size:18px; }
+  .fs-flap-head { margin-bottom:12px; }
+  .fs-shots { grid-template-columns:1fr 1fr!important; gap:12px; }
+  .farmion-site .fs-actions > :is(.fs-brass,.fs-strap) { width:min(100%,260px); min-width:0; }
+  .farmion-site .fs-toplink-label { padding:7px 12px; font-size:16px; }
+  .fs-toplinks { gap:7px; }
+  .farmion-site .fs-icon-link { width:40px; height:40px; }
+  .fs-shot .fs-pocket { padding:5px; }
+  .fs-shot figcaption { font-size:13px; padding-top:5px; }
+  .fs-footer .fs-wrap { flex-direction:column; align-items:flex-start; }
 }
-.site-nav-link:hover .site-nav-label,.site-nav-link:focus-visible .site-nav-label {
-  opacity:1;
-  visibility:visible;
-}
-.farmion-site :is(.fp-eyebrow,.eyebrow) {
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  margin:0 0 18px;
-}
-.farmion-site :is(.fp-hero,.hero) {
-  padding:60px 0 64px;
-  display:grid;
-  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
-  gap:48px;
-  align-items:start;
-}
-.farmion-site .hero-copy { min-width:0; padding-top:64px; }
-.farmion-site :is(.fp-hero,.hero) h1 {
-  font:800 clamp(44px,4.5vw,68px)/1.07 var(--font-display);
-  letter-spacing:-.025em;
-  margin:0 0 26px;
-}
-.farmion-site :is(.fp-hero,.hero) h1 em {
-  font-style:normal;
-  font-weight:800;
-  color:#61764f;
-}
-.farmion-site .hero-intro {
-  font-size:17px;
-  line-height:1.75;
-  max-width:460px;
-  min-height:3.5em;
-  color:var(--muted);
-  margin:0;
-}
-.farmion-site :is(.fp-actions,.actions) {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:29px;
-}
-.farmion-site :is(.fp-button,.button) {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  min-height:48px;
-  padding:12px 20px;
-  border:1px solid var(--ink);
-  border-radius:4px;
-  font:650 13px/1.65 var(--font-body);
-  text-decoration:none;
-  color:var(--ink);
-  background:transparent;
-  cursor:pointer;
-}
-.farmion-site :is(.fp-button-primary,.button.primary) { background:var(--ink); color:var(--paper); }
-.farmion-site :is(.fp-button,.button):hover { background:#e6eadc; }
-.farmion-site :is(.fp-button-primary,.button.primary):hover { background:#305340; }
-.farmion-site .hero-meta {
-  min-height:86px;
-  margin-top:18px;
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.65;
-}
-.farmion-site .hero-meta p { margin:0; font:inherit; letter-spacing:normal; }
-.farmion-site .hero-meta .hero-price { margin-top:13px; font-size:12px; }
-.farmion-site .hero-meta strong { color:var(--ink); }
-.farmion-site :is(.fp-art,.hero-art) { position:relative; min-width:0; padding-bottom:34px; }
-.farmion-site :is(.fp-window,.press-window) { position:relative; filter:drop-shadow(0 9px 8px #17372f1a); }
-.farmion-site :is(.fp-hero-image,.hero-shot) {
-  display:block;
-  width:100%;
-  height:auto;
-  aspect-ratio:1.12;
-  object-fit:cover;
-  border-radius:27% 27% 5px 5px;
-}
-.farmion-site :is(.fp-window-frame,.press-window-frame) { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
-.farmion-site :is(.fp-stamp,.stamp) {
-  position:absolute;
-  top:24px;
-  left:-20px;
-  width:99px;
-  height:99px;
-  border-radius:50%;
-  background:var(--lime);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  transform:rotate(-12deg);
-  font-size:10px;
-  font-weight:700;
-  line-height:1.4;
-  letter-spacing:.06em;
-}
-.farmion-site :is(.fp-stamp,.stamp) strong { font:800 24px var(--font-display); letter-spacing:-.02em; }
-.farmion-site :is(.fp-postcard,.postcard) {
-  position:absolute;
-  right:-18px;
-  bottom:0;
-  width:44%;
-  margin:0;
-  padding:8px 8px 10px;
-  background:var(--white);
-  box-shadow:0 10px 30px #183c2f22;
-  transform:rotate(5deg);
-}
-.farmion-site :is(.fp-postcard,.postcard) img { width:100%; height:auto; aspect-ratio:1.5; object-fit:cover; }
-.farmion-site :is(.fp-postcard,.postcard) figcaption { text-align:center; font:600 13px var(--font-body); padding-top:8px; }
-.farmion-site .photo-note { position:absolute; bottom:7px; left:2px; font-size:10px; color:var(--muted); }
-.farmion-site :is(.fp-strip,.fact-strip) { background:var(--ink); color:var(--paper); }
-.farmion-site :is(.fp-strip,.fact-strip) :is(.fp-wrap,.wrap) { display:grid; grid-template-columns:repeat(4,1fr); padding-block:24px; gap:24px; }
-.farmion-site :is(.fp-strip,.fact-strip) span { display:block; font-size:10px; letter-spacing:.17em; text-transform:uppercase; color:#c8d5bc; }
-.farmion-site :is(.fp-strip,.fact-strip) strong { display:block; font-size:14px; font-weight:500; margin-top:3px; }
-.farmion-site :is(.fp-section,.section) { padding:88px 0; border-bottom:1px solid var(--line); scroll-margin-top:30px; }
-.farmion-site h2 { font:800 clamp(32px,3.2vw,45px)/1.14 var(--font-display); letter-spacing:-.025em; margin:0 0 22px; }
-.farmion-site h3 { font:800 25px/1.2 var(--font-display); letter-spacing:-.02em; margin:0 0 13px; }
-.farmion-site :is(.fp-heading,.section-heading) { display:flex; justify-content:space-between; align-items:end; gap:25px; margin-bottom:30px; }
-.farmion-site :is(.fp-heading,.section-heading) h2 { margin-bottom:0; }
-.farmion-site :is(.fp-final,.contact) { padding:64px 0; background:var(--ink); color:var(--paper); }
-.farmion-site :is(.fp-final-inner,.contact-grid) { display:grid; grid-template-columns:1fr 175px; gap:40px; align-items:center; }
-.farmion-site :is(.fp-final,.contact) h2 { font-size:41px; }
-.farmion-site :is(.fp-final,.contact) p:not(.eyebrow):not(.fp-eyebrow) { color:#ced9c6; font-size:15px; max-width:600px; }
-.farmion-site :is(.fp-chicken,.chicken) { width:150px; transform:rotate(6deg); }
-.farmion-site :is(.fp-footer,.footer) { padding:28px 0; }
-.farmion-site :is(.fp-footer,.footer) :is(.fp-wrap,.wrap) { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; font-size:11px; color:var(--muted); }
-.farmion-site :is(.fp-footer-links,.footer-links) { display:flex; gap:22px; }
-@media(max-width:1000px) {
-  .farmion-site :is(.fp-wrap,.wrap) { width:calc(100% - 56px); }
-  .farmion-site :is(.fp-hero,.hero) { gap:32px; }
-  .farmion-site .hero-copy { padding-top:20px; }
-  .farmion-site :is(.fp-hero,.hero) h1 { font-size:clamp(32px,4.5vw,49px); }
-  .farmion-site .hero-intro { font-size:15px; }
-  .farmion-site :is(.fp-postcard,.postcard) { right:-4px; }
-  .farmion-site :is(.fp-stamp,.stamp) { left:-10px; }
-  .farmion-site :is(.fp-section,.section) { padding:65px 0; }
-}
-@media(max-width:700px) {
-  .farmion-site :is(.fp-wrap,.wrap) { width:calc(100% - 36px); }
-  .farmion-site :is(.fp-nav-inner,.nav) { min-height:74px; gap:10px; }
-  .farmion-site :is(.fp-brand,.wordmark) { width:clamp(92px,32vw,146px); height:43px; }
-  .farmion-site :is(.fp-brand,.wordmark) img { width:106%; top:50%; left:-3%; transform:translateY(-50%); }
-  .site-links { gap:4px; }
-  .farmion-site .site-nav-link { width:40px; height:40px; }
-  .farmion-site :is(.fp-hero,.hero) { grid-template-columns:1fr; gap:35px; padding:35px 0 43px; }
-  .farmion-site .hero-copy { padding-top:0; }
-  .farmion-site :is(.fp-hero,.hero) h1 { font-size:clamp(34px,10.7vw,48px); }
-  .farmion-site .hero-intro { min-height:5.25em; }
-  .farmion-site :is(.fp-actions,.actions) { gap:10px; }
-  .farmion-site :is(.fp-button,.button) { padding:11px 15px; font-size:12px; gap:8px; }
-  .farmion-site :is(.fp-hero-image,.hero-shot) { aspect-ratio:1.45; border-radius:27% 27% 4px 4px; }
-  .farmion-site :is(.fp-stamp,.stamp) { left:8px; top:9px; width:82px; height:82px; font-size:9px; }
-  .farmion-site :is(.fp-stamp,.stamp) strong { font-size:22px; }
-  .farmion-site :is(.fp-postcard,.postcard) { right:4px; width:41%; }
-  .farmion-site :is(.fp-postcard,.postcard) figcaption { font-size:10px; }
-  .farmion-site .photo-note { font-size:9px; max-width:50%; line-height:1.3; }
-  .farmion-site :is(.fp-strip,.fact-strip) :is(.fp-wrap,.wrap) { grid-template-columns:repeat(2,1fr); gap:20px; }
-  .farmion-site :is(.fp-strip,.fact-strip) strong { font-size:13px; }
-  .farmion-site :is(.fp-section,.section) { padding:47px 0; }
-  .farmion-site :is(.fp-heading,.section-heading) { align-items:start; flex-direction:column; gap:18px; margin-bottom:25px; }
-  .farmion-site :is(.fp-final,.contact) { padding:45px 0; }
-  .farmion-site :is(.fp-final-inner,.contact-grid) { grid-template-columns:1fr 70px; gap:15px; }
-  .farmion-site :is(.fp-final,.contact) h2 { font-size:32px; }
-  .farmion-site :is(.fp-final,.contact) p:not(.eyebrow):not(.fp-eyebrow) { font-size:13px; }
-  .farmion-site :is(.fp-chicken,.chicken) { width:70px; }
-  .farmion-site :is(.fp-footer,.footer) :is(.fp-wrap,.wrap) { align-items:start; flex-direction:column; }
-  .site-identity { gap:8px 14px; }
-}
-@media(max-width:380px) {
-  .farmion-site .site-nav-link { width:36px; height:40px; }
-}
-@media print {
-  .farmion-site :is(.fp-hero,.hero,.fp-section,.section) { padding:20px 0; }
-  .farmion-site :is(.fp-wrap,.wrap) { width:100%; }
+@media (prefers-reduced-motion:reduce) {
+  .fs-brass, .fs-strap { transition:none; }
 }

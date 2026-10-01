@@ -7,7 +7,8 @@ The public kit lives in `press/`. It is a static page with no build step require
 Do not use em dashes in promotional or press kit copy, including page titles and PDF metadata.
 
 - `content.json`: facts, descriptions, contact email, gallery selection, and proposed regional pricing.
-- `build.py`: builds the press HTML, five-page PDF, text copy, source manifest, and three ZIP downloads.
+- `page.py`: the press page template. `python tools/presskit/page.py` rebuilds `press/index.html` with only Pillow installed.
+- `build.py`: builds the press HTML (through `page.py`), five-page PDF, text copy, source manifest, and three ZIP downloads.
 - `../../press/styles.css` and `../../press/app.js`: press page presentation and interactions.
 - `../../press/shared.css`: shared headers, heroes, banners, typography, buttons, and footer layout for both web pages.
 - `../../press/assets/ui-icons.svg`: shared navigation/social icons and Netherlands/Estonia flags. Icon buttons have accessible names and hover/focus labels.
