@@ -4,12 +4,19 @@ Run `python tools/presskit/page.py` to rebuild press/index.html alone; build.py 
 """
 from html import escape as E
 from pathlib import Path
+import hashlib
 import json
 
 from PIL import Image
 
 SOURCE = Path(__file__).resolve().parent
 ROOT = SOURCE.parents[1] / 'press'
+
+
+def asset(path):
+    """A page-relative asset URL tagged with its content hash, so a deploy is never hidden behind a cached copy."""
+    digest = hashlib.sha1((ROOT / path).read_bytes()).hexdigest()[:10]
+    return f'{path}?v={digest}'
 
 
 def icon(name):
@@ -83,7 +90,7 @@ def page_html(C):
 <meta name="theme-color" content="#a3def4"><title>Farmion Press Kit | Baer &amp; Hoggo Games</title>
 <link rel="icon" href="assets/brand/chicken.png">
 <link rel="preload" href="assets/fonts/Nunito.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="assets/fonts/Baloo2.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="assets/fonts/fonts.css"><link rel="stylesheet" href="shared.css"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<link rel="stylesheet" href="assets/fonts/fonts.css"><link rel="stylesheet" href="{asset('shared.css')}"><link rel="stylesheet" href="{asset('styles.css')}"><script src="{asset('app.js')}" defer></script></head>
 <body class="farmion-site"><a class="fs-skip" href="#main">Skip to press kit</a>
 <header class="fs-sky">
   <nav class="fs-wrap fs-toplinks" aria-label="Farmion links">

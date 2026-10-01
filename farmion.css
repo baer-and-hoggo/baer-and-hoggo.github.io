@@ -3,8 +3,7 @@
 #farmion-view .fp-logo { width:min(540px,86%); aspect-ratio:1210/308; min-height:0; margin:26px auto 22px; display:flow-root; overflow:clip; overflow-clip-margin:14px; }
 #farmion-view .fp-logo img { display:block; width:105.79%; max-width:none; margin:-17.02% 0 0 -2.89%; filter:drop-shadow(0 6px 0 rgb(59 42 30 / 18%)); }
 #farmion-view .fp-tagline { max-width:520px; margin:0 auto 22px; font-size:clamp(18px,2.4vw,22px); font-weight:700; line-height:1.4; }
-#farmion-view .fp-when { margin:18px 0 0; }
-#farmion-view .fp-when .fs-tape { margin:0; font-size:17px; }
+#farmion-view .fp-when { margin:16px 0 0; color:rgb(59 42 30 / 72%); font-size:15px; font-weight:700; }
 
 #farmion-view .fp-trailer .fs-pocket iframe { aspect-ratio:16/9; border:0; background:#262c21; }
 
@@ -26,7 +25,6 @@
   #farmion-view .fp-logo { margin:14px auto 16px; }
   #farmion-view .fp-tagline { font-size:17px; margin-bottom:18px; }
   #farmion-view .fs-actions { flex-direction:column; align-items:center; gap:10px; }
-  #farmion-view .fp-when .fs-tape { font-size:15px; }
   #farmion-view .fp-thing .fs-tape { margin-bottom:8px; }
   #farmion-view .fp-patches { gap:7px; }
   #farmion-view .fp-patches li { padding:3px 9px; font-size:14px; }

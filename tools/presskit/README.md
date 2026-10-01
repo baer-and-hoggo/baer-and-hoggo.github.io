@@ -15,6 +15,8 @@ Do not use em dashes in promotional or press kit copy, including page titles and
 - `../../index.html`, `../../farmion.css`, and `../../farmion.js`: the public Farmion page.
 - `../../assets/greenhouse-frame.svg`: decorative greenhouse frame; also copied to `press/assets/brand/` for the self-contained press page.
 
+After editing the main page's CSS or JS, run `python tools/stamp_assets.py` so browsers fetch the new files; the press page tags its own.
+
 Run `python tools/presskit/build.py` from the repo root with Python, Pillow, ReportLab, fontTools, and pypdf installed. The PDF builder embeds static instances of the bundled game fonts. Run `python -m http.server 8766 --bind 127.0.0.1` from the repo root to preview the whole site.
 
 Both pages and the PDF use Farmion's in-game fonts: Baloo 2 at weight 800 for headings and Nunito for body text. The unmodified variable font files in `press/assets/fonts/` come from `Content/VoxelFarm/UI/Fonts/` in the game project. Their SIL Open Font License is included in `OFL.txt`; `fonts.css` is shared by the main site and press page.
