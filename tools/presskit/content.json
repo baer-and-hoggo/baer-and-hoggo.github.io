@@ -43,8 +43,8 @@
       "English"
     ],
     [
-      "Proposed base price",
-      "9,95€ / US$10.95"
+      "Price",
+      "TBD"
     ]
   ],
   "features": [
@@ -130,21 +130,6 @@
       "caption": "A farmer in a dark hat and outfit outside a timber-framed building.",
       "category": "life"
     }
-  ],
-  "pricing_note": "Proposed base prices. Planned launch discount: 15% for the first 8 days.",
-  "prices": [
-    [
-      "USD",
-      "$10.95"
-    ],
-    [
-      "GBP",
-      "£9.89"
-    ],
-    [
-      "EUR",
-      "9,95€"
-    ]
   ],
   "team": [
     {

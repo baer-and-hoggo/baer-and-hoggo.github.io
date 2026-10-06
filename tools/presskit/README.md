@@ -6,7 +6,7 @@ The public kit lives in `press/`. It is a static page with no build step require
 
 Do not use em dashes in promotional or press kit copy, including page titles and PDF metadata.
 
-- `content.json`: facts, descriptions, contact email, gallery selection, and proposed regional pricing.
+- `content.json`: facts, descriptions, contact email, gallery selection. The price is the `Price` fact row and stays TBD until it is announced.
 - `page.py`: the press page template. `python tools/presskit/page.py` rebuilds `press/index.html` with only Pillow installed.
 - `build.py`: builds the press HTML (through `page.py`), five-page PDF, text copy, source manifest, and three ZIP downloads.
 - `../../press/styles.css` and `../../press/app.js`: press page presentation and interactions.
@@ -21,13 +21,13 @@ Run `python tools/presskit/build.py` from the repo root with Python, Pillow, Rep
 
 Both pages and the PDF use Farmion's in-game fonts: Baloo 2 at weight 800 for headings and Nunito for body text. The unmodified variable font files in `press/assets/fonts/` come from `Content/VoxelFarm/UI/Fonts/` in the game project. Their SIL Open Font License is included in `OFL.txt`; `fonts.css` is shared by the main site and press page.
 
-The website hero's USD/EUR price summary also lives in `index.html`; update it when changing either proposed price, the discount, or launch window.
+The website hero's release line (launch window and price) also lives in `index.html`; keep it in step with the `Planned release` and `Price` facts.
 
 ## Sources
 
 Game facts and screenshots were checked on September 24, 2026 against the [Steam page](https://store.steampowered.com/app/2426390/Farmion/) and [studio site](https://baerandhoggo.com/#farmion). `steam-source.json` preserves the Steam metadata used to build the image source manifest. All 21 original screenshot files are 1920 pixels wide; heights vary and original aspect ratios are preserved in downloads. The logo and mascot PNGs are unchanged originals from the studio website.
 
-Jesse confirmed `baerandhoggo@gmail.com` as the press email and supplied the proposed USD, GBP, and EUR prices, with a planned 15% launch discount lasting 8 days. The latest USD/EUR prices are $10.95 and 9,95€. The Steam release window remains planned Q4 2026 / Early Access.
+Jesse confirmed `baerandhoggo@gmail.com` as the press email. The price reads TBD on every page and download until it is announced. The Steam release window remains planned Q4 2026 / Early Access.
 
 Jesse clarified progression: farm progress belongs to each save. Character progress belongs to each player and includes cosmetics and small gameplay unlocks, such as harvesting larger areas.
 

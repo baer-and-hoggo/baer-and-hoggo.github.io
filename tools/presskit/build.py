@@ -135,7 +135,7 @@ def make_pdf():
     text(f'Baer & Hoggo Games · {C["edition"]}', 42, 812, 8, 'BodyBold', MUTED)
     cv.showPage()
 
-    # 2 / About: facts, descriptions, prices, studio.
+    # 2 / About: facts, descriptions, studio.
     base(2, 'about')
     leather(42, 40, 511, 404)
     tape('about', 56, 54)
@@ -145,11 +145,7 @@ def make_pdf():
         text(key.lower(), 68, y, 7.5, 'BodyBold', STITCH)
         para(E(value), 68, y+12, 178, 9.2, 12.5, 'BodyBold', PRESSED)
         y += 41
-    h = para(E(C['short']), 272, 92, 266, 11.5, 17, 'Body', PRESSED)
-    rect(272, 110+h, 266, 82, CANVAS, 5)
-    text('regional prices', 284, 120+h, 8, 'BodyBold', STITCH)
-    text('   '.join(f'{code} {price}' for code, price in C['prices']), 284, 136+h, 11.5, 'BodyBold', PRESSED)
-    para(E(C['pricing_note']), 284, 156+h, 244, 8.8, 12.5, 'Body', PRESSED)
+    para(E(C['short']), 272, 92, 266, 11.5, 17, 'Body', PRESSED)
     leather(42, 464, 511, 300)
     tape('studio', 56, 478)
     para(E(C['studio_copy']), 56, 512, 483, 10.5, 16, 'Body', PRESSED)
@@ -232,8 +228,6 @@ def text_copy():
     lines += [f'{k}: {v}' for k,v in C['facts']]
     lines += ['', 'SHORT DESCRIPTION', C['short'], '', 'FULL DESCRIPTION', C['long'], '', 'IN THE GAME', ', '.join(C['in_game']), '', 'FEATURES']
     lines += [f'{title}\n{body}\n' for title,body in C['features']]
-    lines += ['', 'PROPOSED REGIONAL PRICING', C['pricing_note']]
-    lines += [f'{code}: {price}' for code,price in C['prices']]
     lines += ['', 'ABOUT THE STUDIO', C['studio_copy'], '', 'TEAM']
     for person in C['team']:
         lines += [f"{person['name']} - {person['role']} - {person['country']}"]

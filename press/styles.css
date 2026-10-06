@@ -19,7 +19,6 @@
 .pk-facts dt { color:rgb(255 226 186 / 62%); font-size:15px; font-weight:700; }
 .pk-facts dd { margin:0; font-weight:700; overflow-wrap:anywhere; }
 .pk-facts a { color:var(--kit-thread); }
-.pk-prices { font-weight:800; }
 .pk-features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-bottom:14px; }
 .pk-copy button.copied { background:var(--kit-brass-plate); color:var(--kit-brass-ink)!important; }
 .pk-patches { display:flex; flex-wrap:wrap; gap:10px; margin:0; padding:0; list-style:none; }

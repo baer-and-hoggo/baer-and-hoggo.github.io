@@ -10,7 +10,7 @@ Planned release: Q4 2026 · Early Access
 Genre: Cozy farming & life simulation
 Play modes: Single-player & online co-op
 Language: English
-Proposed base price: 9,95€ / US$10.95
+Price: TBD
 
 SHORT DESCRIPTION
 Farmion is a cozy voxel farming and life sim for PC. Grow crops, keep livestock and build a village with markets, shops and restaurants, alone or with friends in online co-op. Your farm keeps going while you're offline.
@@ -46,12 +46,6 @@ Build and furnish your own house, then decorate the farm with roads, lights, fen
 Do it together
 Play solo or with friends in online co-op. The farm level decides what everyone can build, quests push the farm forward, and your own progress extends your tractor's reach. The farm keeps going while you're offline.
 
-
-PROPOSED REGIONAL PRICING
-Proposed base prices. Planned launch discount: 15% for the first 8 days.
-USD: $10.95
-GBP: £9.89
-EUR: 9,95€
 
 ABOUT THE STUDIO
 Baer & Hoggo Games is a two-person studio based in the European Union. We’re working on Farmion alongside our jobs.

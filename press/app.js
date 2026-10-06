@@ -22,8 +22,3 @@ document.querySelectorAll('[data-copy-text]').forEach(button=>button.addEventLis
   catch{button.textContent='select the text';}
   setTimeout(()=>{button.textContent=label;button.classList.remove('copied')},1600);
 }));
-function revealLinkedPricing(){
-  if(location.hash==='#pricing'){document.getElementById('pricing').scrollIntoView();}
-}
-window.addEventListener('hashchange',revealLinkedPricing);
-revealLinkedPricing();

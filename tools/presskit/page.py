@@ -34,10 +34,6 @@ def page_html(C):
     facts = copyblock('fact sheet',
                       '<dl class="pk-facts">' + ''.join(f'<div><dt>{E(k)}</dt><dd>{E(v)}</dd></div>' for k, v in C['facts']) + '</dl>',
                       '\n'.join(f'{k}: {v}' for k, v in C['facts']))
-    prices = copyblock('prices',
-                       f'<p>{E(C["pricing_note"])}</p><p class="pk-prices">' + ' · '.join(f'{E(code)} {E(price)}' for code, price in C['prices']) + '</p>',
-                       C['pricing_note'] + '\n' + '\n'.join(f'{code}: {price}' for code, price in C['prices']),
-                       'pk-pricing" id="pricing')
     short = copyblock('short description', f'<p>{E(C["short"])}</p>', C['short'])
     long = copyblock('long description', ''.join(f'<p>{E(p)}</p>' for p in C['long'].split('\n\n')), C['long'])
     features = ''.join(copyblock(E(t.lower()), f'<p>{E(b)}</p>', f'{t}\n{b}', 'pk-feature') for t, b in C['features'])
@@ -114,7 +110,7 @@ def page_html(C):
   <section class="fs-section" aria-labelledby="about-title"><div class="fs-flap">
     <h2 id="about-title" class="fs-tape">about</h2>
     <div class="pk-about">
-      <div class="pk-col">{facts}{prices}</div>
+      <div class="pk-col">{facts}</div>
       <div class="pk-col">{short}{long}</div>
     </div>
   </div></section>
