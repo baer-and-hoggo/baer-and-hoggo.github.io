@@ -102,20 +102,48 @@ def make_pdf():
         cv.linkURL(url, (x, H-top-size-3, x+tw, H-top+3), relative=0, thickness=0)
         return tw
 
-    def chips(items, x, top, width, size=9.5):
+    def chips(items, x, top, width, size=9.5, draw=True):
         cx, cy = x, top
         for item in items:
             tw = pdfmetrics.stringWidth(item, 'BodyBold', size) + 16
             if cx + tw > x + width: cx, cy = x, cy + size + 15
-            rect(cx, cy, tw, size+9, POCKET, 4)
-            text(item, cx+8, cy+4, size, 'BodyBold', PRESSED)
+            if draw:
+                rect(cx, cy, tw, size+9, POCKET, 4)
+                text(item, cx+8, cy+4, size, 'BodyBold', PRESSED)
             cx += tw + 7
         return cy + size + 9 - top
+
+    # Measure feature rows before drawing so longer copy continues on a new page.
+    feature_style = ParagraphStyle('feature', fontName='Body', fontSize=9.3, leading=13.6)
+    ch = chips(C['in_game'], 56, 92, 483, draw=False)
+    feature_pages = [[]]
+    top = 122 + ch
+    for start in range(0, len(C['features']), 2):
+        pair = C['features'][start:start+2]
+        body_height = max(Paragraph(E(body), feature_style).wrap(222, H)[1] for _, body in pair)
+        card_height = 44 + body_height + 16
+        if top + card_height > 764:
+            feature_pages.append([])
+            top = 98
+        if top + card_height > 764:
+            raise ValueError('A feature card is too tall for a PDF page.')
+        feature_pages[-1].append((top, card_height, pair))
+        top += card_height + 16
+    description = '<br/><br/>'.join(E(p) for p in C['long'].split('\n\n'))
+    description_style = ParagraphStyle('description', fontName='Body', fontSize=10.5, leading=16)
+    description_height = 44 + Paragraph(description, description_style).wrap(483, H)[1] + 16
+    if top + description_height > 764:
+        feature_pages.append([])
+        top = 98
+    if top + description_height > 764:
+        raise ValueError('The full description is too tall for a PDF page.')
+    description_top = top
+    page_count = 4 + len(feature_pages)
 
     def base(page, section):
         rect(0, 0, W, H, CREAM)
         text(f'farmion / press kit / {section}', 42, 808, 8, 'BodyBold', MUTED)
-        text(f'{page} / 5', 527, 808, 8, 'Body', MUTED)
+        text(f'{page} / {page_count}', 527, 808, 8, 'Body', MUTED)
 
     # 1 / Cover: sky, logo, screenshots, and the facts on a leather strap.
     rect(0, 0, W, H, CREAM)
@@ -162,26 +190,29 @@ def make_pdf():
     para('Two friends making Farmion alongside their jobs, from the Netherlands and Estonia.', 56, 684, 340, 10.5, 16, 'Body', PRESSED)
     cv.showPage()
 
-    # 3 / In the game.
-    base(3, 'in the game')
-    ch = chips(C['in_game'], 56, 92, 483)
-    leather(42, 40, 511, 66+ch)
-    tape('in the game', 56, 54)
-    chips(C['in_game'], 56, 92, 483)
-    row = 132
-    for i, (title, body) in enumerate(C['features']):
-        x = 42 + (i % 2)*261; top = 122 + ch + (i//2)*row
-        leather(x, top, 250, row - 12)
-        tape(title.lower(), x+14, top+14, 12)
-        para(E(body), x+14, top+44, 222, 9.3, 13.6, 'Body', PRESSED)
-    top = 122 + ch + 3*row
-    leather(42, top, 511, 764 - top)
-    tape('farmion', 56, top+14, 12)
-    para(E(C['short']), 56, top+44, 483, 9.8, 14.5, 'Body', PRESSED)
-    cv.showPage()
+    # 3 onward / In the game, continuing as needed.
+    for page_index, rows in enumerate(feature_pages):
+        base(3 + page_index, 'in the game')
+        if page_index == 0:
+            leather(42, 40, 511, 66+ch)
+            tape('in the game', 56, 54)
+            chips(C['in_game'], 56, 92, 483)
+        else:
+            tape('in the game / continued', 56, 54)
+        for top, card_height, pair in rows:
+            for column, (title, body) in enumerate(pair):
+                x = 42 + column*261
+                leather(x, top, 250, card_height)
+                tape(title.lower(), x+14, top+14, 12)
+                para(E(body), x+14, top+44, 222, 9.3, 13.6, 'Body', PRESSED)
+        if page_index == len(feature_pages) - 1:
+            leather(42, description_top, 511, description_height)
+            tape('full description', 56, description_top+14, 12)
+            para(description, 56, description_top+44, 483, 10.5, 16, 'Body', PRESSED)
+        cv.showPage()
 
-    # 4 / Screenshots.
-    base(4, 'screenshots')
+    # Screenshots.
+    base(3 + len(feature_pages), 'screenshots')
     leather(42, 40, 511, 724)
     tape('screenshots', 56, 54)
     selection = [C['screenshots'][i] for i in [0, 1, 2, 3, 6, 5]]
@@ -194,8 +225,8 @@ def make_pdf():
     para('All 21 screenshots are in Farmion-Screenshots.zip. Please credit Baer &amp; Hoggo Games.', 58, 738, 470, 9, 12, 'Body', STITCH)
     cv.showPage()
 
-    # 5 / Logos and contact.
-    base(5, 'logos & contact')
+    # Logos and contact.
+    base(4 + len(feature_pages), 'logos & contact')
     leather(42, 40, 511, 300)
     tape('logos', 56, 54)
     for i, (file, label) in enumerate([('farmion-logo.png', 'farmion logo'), ('chicken.png', 'chicken'), ('studio-logo.png', 'studio logo'), ('studio-mascot.png', 'baer & hoggo')]):
@@ -221,6 +252,7 @@ def make_pdf():
         x += link(social['name'].lower(), social['url'], x, 634, 11, THREAD) + 20
     para('Farmion is in development; features and visuals may change.', 58, 660, 470, 8.5, 12, 'Body', STITCH)
     cv.save()
+    return page_count
 
 
 def text_copy():
@@ -236,7 +268,7 @@ def text_copy():
     return '\n'.join(lines)+'\n'
 
 
-def package():
+def package(page_count):
     screenshots=list(sorted((ROOT/'assets/screenshots').glob('*.jpg')))
     brands=list(sorted((ROOT/'assets/brand').glob('*.png')))
     with zipfile.ZipFile(DOWNLOADS/'Farmion-Screenshots.zip','w',zipfile.ZIP_DEFLATED) as z:
@@ -249,7 +281,7 @@ def package():
         for p in screenshots+brands:z.write(p,'Farmion-Press-Assets/'+p.relative_to(ROOT).as_posix())
         for name in ['Farmion-Press-Kit.pdf','Farmion-Press-Copy.txt']:z.write(DOWNLOADS/name,'Farmion-Press-Assets/'+name)
         z.write(ROOT/'asset-manifest.json','Farmion-Press-Assets/asset-manifest.json')
-        z.writestr('Farmion-Press-Assets/README.txt','FARMION / PRESS ASSETS\n'+C['edition']+'\n\nIncludes 21 original in-game screenshots, original transparent brand artwork, a five-page PDF, and editable plain-text press copy.\n\nCredit: Farmion / Baer & Hoggo Games.\nContact: '+C['contact']+'\nSteam: '+STEAM+'\nEpic Games Store: '+C['epic']+'\n\nAll screenshots show a game in development. Logo and chicken/mascot artwork are separate brand assets. No AI-generated gameplay images have been added.\nSources and SHA-256 fingerprints are in asset-manifest.json.\n')
+        z.writestr('Farmion-Press-Assets/README.txt','FARMION / PRESS ASSETS\n'+C['edition']+'\n\nIncludes 21 original in-game screenshots, original transparent brand artwork, a '+str(page_count)+'-page PDF, and editable plain-text press copy.\n\nCredit: Farmion / Baer & Hoggo Games.\nContact: '+C['contact']+'\nSteam: '+STEAM+'\nEpic Games Store: '+C['epic']+'\n\nAll screenshots show a game in development. Logo and chicken/mascot artwork are separate brand assets. No AI-generated gameplay images have been added.\nSources and SHA-256 fingerprints are in asset-manifest.json.\n')
 
 
 def manifest():
@@ -271,5 +303,7 @@ def manifest():
 if __name__=='__main__':
     (ROOT/'index.html').write_text(page_html(C),encoding='utf-8')
     (DOWNLOADS/'Farmion-Press-Copy.txt').write_text(text_copy(),encoding='utf-8')
-    manifest();make_pdf();package()
-    print('Built press page, five-page PDF, copy, manifest, and three asset archives.')
+    manifest()
+    page_count = make_pdf()
+    package(page_count)
+    print(f'Built press page, {page_count}-page PDF, copy, manifest, and three asset archives.')

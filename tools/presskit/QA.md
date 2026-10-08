@@ -24,3 +24,11 @@ Preview from the repository root with `python -m http.server 8766 --bind 127.0.0
 - Game page: `http://127.0.0.1:8766/#farmion`
 - Press page: `http://127.0.0.1:8766/press/`
 - PDF: `press/downloads/Farmion-Press-Kit.pdf`
+
+## October 8, 2026 feature refresh
+
+- Applied Jesse-approved village progression, residents, transport and Cheesery copy; updated the long description and feature list.
+- Rebuilt HTML, text copy, manifest, PDF and the full assets archive. Unchanged logo and screenshot archives remain byte-identical.
+- PDF feature cards now use measured heights and continue across pages. All six rendered pages inspected; full description included; no clipped text or overlaps found.
+- Checked desktop and narrow browser layouts (293 CSS pixels); no horizontal overflow. Copy-all shows its success state and its payload includes all eight features. Browser clipboard readback was unavailable, so payload equality was checked directly in the generated HTML.
+- Checked all feature text and the full description against the source across HTML, TXT and extracted PDF text. No em dashes in copy, HTML, PDF text/metadata or ZIP-contained text. ZIP integrity, bundled PDF/TXT equality, local references and original asset hashes pass.

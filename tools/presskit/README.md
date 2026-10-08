@@ -8,7 +8,7 @@ Do not use em dashes in promotional or press kit copy, including page titles and
 
 - `content.json`: facts, descriptions, contact email, gallery selection. The price is the `Price` fact row and stays TBD until it is announced.
 - `page.py`: the press page template. `python tools/presskit/page.py` rebuilds `press/index.html` with only Pillow installed.
-- `build.py`: builds the press HTML (through `page.py`), five-page PDF, text copy, source manifest, and three ZIP downloads.
+- `build.py`: builds the press HTML (through `page.py`), paginated PDF, text copy, source manifest, and three ZIP downloads.
 - `../../press/styles.css` and `../../press/app.js`: press page presentation and interactions.
 - `../../press/shared.css`: shared headers, heroes, banners, typography, buttons, and footer layout for both web pages.
 - `../../press/assets/ui-icons.svg`: shared navigation/social icons and Netherlands/Estonia flags. Icon buttons have accessible names and hover/focus labels.
@@ -42,3 +42,5 @@ No AI-generated gameplay images were added. The new greenhouse frame is a decora
 The existing Pages workflow deploys pushes to `main`. Review the local changes and obtain Jesse's approval before pushing.
 
 The intended press URL is `https://baerandhoggo.com/press/`.
+
+The October 8, 2026 feature refresh was approved by Jesse after review against the game devlogs, commits and village/Cheesery task records. It adds village progression, resident families, visitor transport and Cheesery to the press copy. Feature cards continue onto another PDF page when needed.

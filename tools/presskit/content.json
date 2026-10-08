@@ -1,7 +1,7 @@
 {
   "title": "Farmion",
   "edition": "October 2026",
-  "verified": "2026-09-24",
+  "verified": "2026-10-08",
   "studio": "Baer & Hoggo Games",
   "contact": "baerandhoggo@gmail.com",
   "steam": "https://store.steampowered.com/app/2426390/Farmion/",
@@ -11,7 +11,7 @@
   "youtube": "https://www.youtube.com/@BaerAndHoggo",
   "headline": "Farmion. Press kit.",
   "short": "Farmion is a cozy voxel farming and life sim for PC. Grow crops, keep livestock and build a village with markets, shops and restaurants, alone or with friends in online co-op. Your farm keeps going while you're offline.",
-  "long": "Farmion is a cozy voxel farming and life sim game by Baer & Hoggo Games, a two-person studio. Shape the land, plant crops, trees and flowers, and keep livestock through the seasons, with rain, snow and wind. Greenhouses let you grow all year round.\n\nAround the farm you build a village. Markets sell your produce over time, processors refine it into new goods and stockpiles grow your storage. Open a café, buffet or restaurant, a grocery store or a flower shop, each with its own skill tree, and let FarmBot drones help look after the fields.\n\nPlay solo or with friends in online co-op. Everyone on a farm shares its farm level, while your own progress stays with you. Crops keep growing, seasons keep turning and markets keep selling while you're offline.\n\nFarmion is planned to enter Early Access in Q4 2026.",
+  "long": "Farmion is a cozy voxel farming and life sim game by Baer & Hoggo Games, a two-person studio. Shape the land, plant crops, trees and flowers, and keep livestock through the seasons, with rain, snow and wind. Greenhouses let you grow all year round.\n\nAround the farm, grow a village of families, shops and restaurants. Upgrade residents' homes and unlock new landmarks as your village develops. Buses, hot air balloons and steam trains bring visitors who wander its roads. Run your businesses, fulfil train contracts, or try Cheesery, discovering different cheeses by moving aging wheels between your home, the open air and a cellar.\n\nPlay solo or with friends in online co-op. Everyone on a farm shares its farm level, while your own progress stays with you. Crops keep growing, seasons keep turning and markets keep selling while you're offline.\n\nFarmion is planned to enter Early Access in Q4 2026.",
   "studio_copy": "Baer & Hoggo Games is a two-person studio based in the European Union. We’re working on Farmion alongside our jobs.",
   "facts": [
     [
@@ -53,12 +53,20 @@
       "Shape the land and plant crops, trees and flowers. Keep livestock and look after them. Rain, snow and wind change the farm through the year, and greenhouses let you grow in any season."
     ],
     [
-      "Build a village",
-      "Markets sell your produce over time, processors refine it into new goods and stockpiles add storage. Nicer surroundings make buildings better, so a pretty market holds more stock."
+      "Grow your village",
+      "Welcome families and build up their homes, from homes on wheels to timber, brick and stone houses. Work in your businesses to earn new house details, grow through three village eras and unlock landmarks. Residents stroll along your roads, while arriving visitors stop to look around and explore."
+    ],
+    [
+      "Welcome the next arrival",
+      "Build bus stops, balloon landing pads and a steam railway to bring visitors to your village. Watch buses pull in, hot air balloons descend and the train steam into its station. Load goods for train contracts to earn rewards and build your trading reputation."
     ],
     [
       "Run your own businesses",
       "Cook dishes in a café, buffet or restaurant for the big money, sell raw produce fast in a grocery store, or arrange bouquets in a flower shop to earn prestige. Each business has its own skill tree."
+    ],
+    [
+      "Discover the art of Cheesery",
+      "Turn six kinds of milk into 66 cheeses. Carry wheels between racks inside buildings, outside on the farm and in a Cheese Cellar: where they age determines what they become. Discover new aging routes on your Cheese Board, then seal finished wheels at the Wax Pot for rewards."
     ],
     [
       "Let the robots help",
@@ -153,11 +161,16 @@
     "livestock",
     "farm quests",
     "farmbot drones",
-    "villages & markets",
+    "village progression",
+    "resident families",
+    "markets",
+    "buses, balloons & trains",
+    "train contracts",
     "processors",
     "café, buffet & restaurant",
     "grocery store",
     "flower shop",
+    "cheesery",
     "your own home",
     "stockpiles",
     "farm levels",
