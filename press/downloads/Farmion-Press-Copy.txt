@@ -6,7 +6,7 @@ FACT SHEET
 Developer / publisher: Baer & Hoggo Games
 Location: European Union
 Platform: Windows PC · Steam & Epic Games Store
-Planned release: Q4 2026 · Early Access
+Planned release: Q1 2027 · Early Access
 Genre: Cozy farming & life simulation
 Play modes: Single-player & online co-op
 Language: English
@@ -22,7 +22,7 @@ Around the farm, grow a village of families, shops and restaurants. Upgrade resi
 
 Play solo or with friends in online co-op. Everyone on a farm shares its farm level, while your own progress stays with you. Crops keep growing, seasons keep turning and markets keep selling while you're offline.
 
-Farmion is planned to enter Early Access in Q4 2026.
+Farmion is planned to enter Early Access in Q1 2027.
 
 IN THE GAME
 landscaping, seasons & weather, crops, trees & flowers, livestock, farm quests, farmbot drones, village progression, resident families, markets, buses, balloons & trains, train contracts, processors, café, buffet & restaurant, grocery store, flower shop, cheesery, your own home, stockpiles, farm levels, skill trees, greenhouses, offline progress, roads, lights & fences, decorations, pets, solo or co-op
@@ -76,7 +76,7 @@ YouTube: https://www.youtube.com/@BaerAndHoggo
 Reddit: https://www.reddit.com/r/farmion/
 
 DEVELOPMENT STATUS
-Farmion is in development and planned to enter Steam Early Access in Q4 2026. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.
+Farmion is in development and planned to enter Steam Early Access in Q1 2027. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.
 
 IMAGE CREDIT
 Farmion / Baer & Hoggo Games.

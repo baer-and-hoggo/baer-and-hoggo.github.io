@@ -157,7 +157,7 @@ def make_pdf():
     pocket(ROOT/'assets/screenshots/steam-06.jpg', 42, 608, 250, 130)
     pocket(ROOT/'assets/screenshots/steam-05.jpg', 303, 608, 250, 130)
     leather(42, 752, 511, 46)
-    for i, (label, value) in enumerate([('release', 'Q4 2026 · Early Access'), ('platform', 'Windows PC'), ('play', 'Solo & online co-op')]):
+    for i, (label, value) in enumerate([('release', 'Q1 2027 · Early Access'), ('platform', 'Windows PC'), ('play', 'Solo & online co-op')]):
         text(label, 60+i*170, 761, 7.5, 'BodyBold', STITCH)
         text(value, 60+i*170, 774, 10.5, 'BodyBold', PRESSED)
     text(f'Baer & Hoggo Games · {C["edition"]}', 42, 812, 8, 'BodyBold', MUTED)
@@ -264,7 +264,7 @@ def text_copy():
     for person in C['team']:
         lines += [f"{person['name']} - {person['role']} - {person['country']}"]
         if 'linkedin' in person: lines += [person['linkedin']]
-    lines += ['','PRESS CONTACT',C['contact'],'','OFFICIAL LINKS',STEAM,C['epic'],C['website'],C['discord'],*[x['name']+': '+x['url'] for x in C['socials']],'','DEVELOPMENT STATUS','Farmion is in development and planned to enter Steam Early Access in Q4 2026. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.','', 'IMAGE CREDIT','Farmion / Baer & Hoggo Games.']
+    lines += ['','PRESS CONTACT',C['contact'],'','OFFICIAL LINKS',STEAM,C['epic'],C['website'],C['discord'],*[x['name']+': '+x['url'] for x in C['socials']],'','DEVELOPMENT STATUS','Farmion is in development and planned to enter Steam Early Access in Q1 2027. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.','', 'IMAGE CREDIT','Farmion / Baer & Hoggo Games.']
     return '\n'.join(lines)+'\n'
 
 

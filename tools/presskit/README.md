@@ -27,7 +27,7 @@ The website hero's release line (launch window and price) also lives in `index.h
 
 Game facts and screenshots were checked on September 24, 2026 against the [Steam page](https://store.steampowered.com/app/2426390/Farmion/) and [studio site](https://baerandhoggo.com/#farmion). `steam-source.json` preserves the Steam metadata used to build the image source manifest. All 21 original screenshot files are 1920 pixels wide; heights vary and original aspect ratios are preserved in downloads. The logo and mascot PNGs are unchanged originals from the studio website.
 
-Jesse confirmed `baerandhoggo@gmail.com` as the press email. The price reads TBD on every page and download until it is announced. The Steam release window remains planned Q4 2026 / Early Access.
+Jesse confirmed `baerandhoggo@gmail.com` as the press email. The price reads TBD on every page and download until it is announced. The Steam release window remains planned Q1 2027 / Early Access.
 
 Jesse clarified progression: farm progress belongs to each save. Character progress belongs to each player and includes cosmetics and small gameplay unlocks, such as harvesting larger areas.
 
