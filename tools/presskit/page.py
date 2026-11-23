@@ -82,8 +82,8 @@ def page_html(C):
 
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="The Farmion press kit: facts, screenshots, logos and contact details from Baer &amp; Hoggo Games.">
-<meta name="theme-color" content="#a3def4"><title>Farmion Press Kit | Baer &amp; Hoggo Games</title>
+<meta name="description" content="The Farmion press kit: facts, screenshots, logos and contact details from Baer &amp; Hoggo OÜ.">
+<meta name="theme-color" content="#a3def4"><title>Farmion Press Kit | Baer &amp; Hoggo OÜ</title>
 <link rel="canonical" href="https://baerandhoggo.com/press/">
 <link rel="icon" href="assets/brand/chicken.png">
 <link rel="preload" href="assets/fonts/Nunito.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="assets/fonts/Baloo2.ttf" as="font" type="font/ttf" crossorigin>
@@ -102,7 +102,7 @@ def page_html(C):
       <a class="fs-brass" href="downloads/Farmion-Press-Assets.zip" download>{icon('download')}<span>download everything</span></a>
       <a class="fs-strap" href="downloads/Farmion-Press-Kit.pdf" download>{icon('press')}<span>pdf</span></a>
     </div>
-    <p class="pk-credit">Please credit Baer &amp; Hoggo Games.</p>
+    <p class="pk-credit">Please credit Baer &amp; Hoggo OÜ.</p>
   </div>
 </header>
 
@@ -150,7 +150,7 @@ def page_html(C):
 </main>
 
 <footer class="fs-footer"><div class="fs-wrap">
-  <span class="site-identity"><span>© 2026 Baer &amp; Hoggo Games</span><span class="site-countries"><span><svg class="site-flag" role="img" aria-label="Netherlands" viewBox="0 0 16 11"><use href="assets/ui-icons.svg#nl"></use></svg></span><span><svg class="site-flag" role="img" aria-label="Estonia" viewBox="0 0 16 11"><use href="assets/ui-icons.svg#ee"></use></svg></span></span></span>
+  <span class="site-identity"><span>© 2026 Baer &amp; Hoggo OÜ</span><span class="site-countries"><span><svg class="site-flag" role="img" aria-label="Netherlands" viewBox="0 0 16 11"><use href="assets/ui-icons.svg#nl"></use></svg></span><span><svg class="site-flag" role="img" aria-label="Estonia" viewBox="0 0 16 11"><use href="assets/ui-icons.svg#ee"></use></svg></span></span></span>
   <nav aria-label="Footer"><a href="../#farmion">website</a><a href="../privacy/">privacy</a><span>facts checked {C['verified']}</span></nav>
 </div></footer>
 

@@ -89,7 +89,7 @@ def validate_homepage(metadata):
     require(organization.get("@context") == "https://schema.org"
             and organization.get("@type") == "Organization",
             "Homepage JSON-LD must declare schema.org Organization")
-    require(organization.get("name") == "Baer & Hoggo Games"
+    require(organization.get("name") == "Baer & Hoggo OÜ"
             and organization.get("url") == f"{ORIGIN}/",
             "Organization name and URL must match the studio")
     logo = urlsplit(organization.get("logo", ""))

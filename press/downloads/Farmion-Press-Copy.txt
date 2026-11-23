@@ -1,9 +1,9 @@
 FARMION | PRESS COPY
-Baer & Hoggo Games
+Baer & Hoggo OÜ
 Facts checked: 2026-10-08
 
 FACT SHEET
-Developer: Baer & Hoggo Games
+Developer: Baer & Hoggo OÜ
 Publisher: PlayWay S.A.
 Location: European Union
 Platform: Windows PC · Steam & Epic Games Store
@@ -17,7 +17,7 @@ SHORT DESCRIPTION
 Farmion is a cozy voxel farming and life sim for PC. Grow crops, keep livestock and build a village with markets, shops and restaurants, alone or with friends in online co-op. Your farm keeps going while you're offline.
 
 FULL DESCRIPTION
-Farmion is a cozy voxel farming and life sim game by Baer & Hoggo Games, a two-person studio. Shape the land, plant crops, trees and flowers, and keep livestock through the seasons, with rain, snow and wind. Greenhouses let you grow all year round.
+Farmion is a cozy voxel farming and life sim game by Baer & Hoggo OÜ, a two-person studio. Shape the land, plant crops, trees and flowers, and keep livestock through the seasons, with rain, snow and wind. Greenhouses let you grow all year round.
 
 Around the farm, grow a village of families, shops and restaurants. Upgrade residents' homes and unlock new landmarks as your village develops. Buses, hot air balloons and steam trains bring visitors who wander its roads. Run your businesses, fulfil train contracts, or try Cheesery, discovering different cheeses by moving aging wheels between your home, the open air and a cellar.
 
@@ -55,7 +55,7 @@ Play solo or with friends in online co-op. The farm level decides what everyone 
 
 
 ABOUT THE STUDIO
-Baer & Hoggo Games is a two-person studio based in the European Union. We’re working on Farmion alongside our jobs.
+Baer & Hoggo OÜ is a two-person studio based in the European Union. We’re working on Farmion alongside our jobs.
 
 TEAM
 Jesse van Vliet - Game Developer - Netherlands
@@ -80,4 +80,4 @@ DEVELOPMENT STATUS
 Farmion is in development and planned to release on Steam in Q1 2027. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.
 
 IMAGE CREDIT
-Farmion / Baer & Hoggo Games.
+Farmion / Baer & Hoggo OÜ.

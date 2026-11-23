@@ -160,7 +160,7 @@ def make_pdf():
     for i, (label, value) in enumerate([('release', 'Q1 2027'), ('platform', 'Windows PC'), ('play', 'Solo & online co-op')]):
         text(label, 60+i*170, 761, 7.5, 'BodyBold', STITCH)
         text(value, 60+i*170, 774, 10.5, 'BodyBold', PRESSED)
-    text(f'Baer & Hoggo Games · {C["edition"]}', 42, 812, 8, 'BodyBold', MUTED)
+    text(f'Baer & Hoggo OÜ · {C["edition"]}', 42, 812, 8, 'BodyBold', MUTED)
     cv.showPage()
 
     # 2 / About: facts, descriptions, studio.
@@ -226,7 +226,7 @@ def make_pdf():
         text(s['title'].lower(), x+2, top+144, 10, 'BodyBold', PRESSED)
         sw, sh = Image.open(ROOT/f'assets/screenshots/steam-{s["id"]:02d}.jpg').size
         text(f'in-game · {sw} × {sh}', x+2, top+159, 7.5, 'Body', STITCH)
-    para('All 21 screenshots are in Farmion-Screenshots.zip. Please credit Baer &amp; Hoggo Games.', 58, 738, 470, 9, 12, 'Body', STITCH)
+    para('All 21 screenshots are in Farmion-Screenshots.zip. Please credit Baer &amp; Hoggo OÜ.', 58, 738, 470, 9, 12, 'Body', STITCH)
     cv.showPage()
 
     # Logos and contact.
@@ -260,7 +260,7 @@ def make_pdf():
 
 
 def text_copy():
-    lines=['FARMION | PRESS COPY', 'Baer & Hoggo Games', 'Facts checked: '+C['verified'],'','FACT SHEET']
+    lines=['FARMION | PRESS COPY', 'Baer & Hoggo OÜ', 'Facts checked: '+C['verified'],'','FACT SHEET']
     lines += [f'{k}: {v}' for k,v in C['facts']]
     lines += ['', 'SHORT DESCRIPTION', C['short'], '', 'FULL DESCRIPTION', C['long'], '', 'IN THE GAME', ', '.join(C['in_game']), '', 'FEATURES']
     lines += [f'{title}\n{body}\n' for title,body in C['features']]
@@ -268,7 +268,7 @@ def text_copy():
     for person in C['team']:
         lines += [f"{person['name']} - {person['role']} - {person['country']}"]
         if 'linkedin' in person: lines += [person['linkedin']]
-    lines += ['','PRESS CONTACT',C['contact'],'','OFFICIAL LINKS',STEAM,C['epic'],C['website'],C['discord'],*[x['name']+': '+x['url'] for x in C['socials']],'','DEVELOPMENT STATUS','Farmion is in development and planned to release on Steam in Q1 2027. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.','', 'IMAGE CREDIT','Farmion / Baer & Hoggo Games.']
+    lines += ['','PRESS CONTACT',C['contact'],'','OFFICIAL LINKS',STEAM,C['epic'],C['website'],C['discord'],*[x['name']+': '+x['url'] for x in C['socials']],'','DEVELOPMENT STATUS','Farmion is in development and planned to release on Steam in Q1 2027. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.','', 'IMAGE CREDIT','Farmion / Baer & Hoggo OÜ.']
     return '\n'.join(lines)+'\n'
 
 
@@ -277,15 +277,15 @@ def package(page_count):
     brands=list(sorted((ROOT/'assets/brand').glob('*.png')))
     with zipfile.ZipFile(DOWNLOADS/'Farmion-Screenshots.zip','w',zipfile.ZIP_DEFLATED) as z:
         for p in screenshots:z.write(p,'Farmion-Screenshots/'+p.name)
-        z.writestr('Farmion-Screenshots/README.txt','Original Steam gallery images, 1920 pixels wide. Heights vary; original aspect ratios are preserved. In development.\nCredit: Farmion / Baer & Hoggo Games.\nSee asset-manifest.json in the full press assets for source URLs and captions.\n')
+        z.writestr('Farmion-Screenshots/README.txt','Original Steam gallery images, 1920 pixels wide. Heights vary; original aspect ratios are preserved. In development.\nCredit: Farmion / Baer & Hoggo OÜ.\nSee asset-manifest.json in the full press assets for source URLs and captions.\n')
     with zipfile.ZipFile(DOWNLOADS/'Farmion-Logos.zip','w',zipfile.ZIP_DEFLATED) as z:
         for p in brands:z.write(p,'Farmion-Logos/'+p.name)
-        z.writestr('Farmion-Logos/README.txt','Original transparent PNG brand artwork from baerandhoggo.com.\nPlease preserve proportions and colors. These are brand assets, not gameplay screenshots.\nCredit: Farmion / Baer & Hoggo Games.\n')
+        z.writestr('Farmion-Logos/README.txt','Original transparent PNG brand artwork from baerandhoggo.com.\nPlease preserve proportions and colors. These are brand assets, not gameplay screenshots.\nCredit: Farmion / Baer & Hoggo OÜ.\n')
     with zipfile.ZipFile(DOWNLOADS/'Farmion-Press-Assets.zip','w',zipfile.ZIP_DEFLATED) as z:
         for p in screenshots+brands:z.write(p,'Farmion-Press-Assets/'+p.relative_to(ROOT).as_posix())
         for name in ['Farmion-Press-Kit.pdf','Farmion-Press-Copy.txt']:z.write(DOWNLOADS/name,'Farmion-Press-Assets/'+name)
         z.write(ROOT/'asset-manifest.json','Farmion-Press-Assets/asset-manifest.json')
-        z.writestr('Farmion-Press-Assets/README.txt','FARMION / PRESS ASSETS\n'+C['edition']+'\n\nIncludes 21 original in-game screenshots, original transparent brand artwork, a '+str(page_count)+'-page PDF, and editable plain-text press copy.\n\nCredit: Farmion / Baer & Hoggo Games.\nContact: '+C['contact']+'\nSteam: '+STEAM+'\nEpic Games Store: '+C['epic']+'\n\nAll screenshots show a game in development. Logo and chicken/mascot artwork are separate brand assets. No AI-generated gameplay images have been added.\nSources and SHA-256 fingerprints are in asset-manifest.json.\n')
+        z.writestr('Farmion-Press-Assets/README.txt','FARMION / PRESS ASSETS\n'+C['edition']+'\n\nIncludes 21 original in-game screenshots, original transparent brand artwork, a '+str(page_count)+'-page PDF, and editable plain-text press copy.\n\nCredit: Farmion / Baer & Hoggo OÜ.\nContact: '+C['contact']+'\nSteam: '+STEAM+'\nEpic Games Store: '+C['epic']+'\n\nAll screenshots show a game in development. Logo and chicken/mascot artwork are separate brand assets. No AI-generated gameplay images have been added.\nSources and SHA-256 fingerprints are in asset-manifest.json.\n')
 
 
 def manifest():

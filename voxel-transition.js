@@ -64,8 +64,8 @@
   function updateBrowserState(viewName) {
     const favicon = document.getElementById('site-favicon');
     document.title = viewName === 'farmion'
-      ? 'Farmion | Baer & Hoggo Games'
-      : 'Baer & Hoggo Games | Farmion';
+      ? 'Farmion | Baer & Hoggo OÜ'
+      : 'Baer & Hoggo OÜ | Farmion';
     if (favicon) {
       favicon.href = viewName === 'farmion' ? 'assets/chicken.png' : 'assets/bh-icon.png';
     }
