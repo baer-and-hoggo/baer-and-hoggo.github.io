@@ -168,12 +168,15 @@ def make_pdf():
     leather(42, 40, 511, 404)
     tape('about', 56, 54)
     rect(56, 90, 200, 340, CANVAS, 5)
+    # Rows take their wrapped height; the gaps share what is left of the canvas panel.
+    fact_style = ParagraphStyle('fact', fontName='BodyBold', fontSize=9.2, leading=12.5)
+    heights = [12 + Paragraph(E(value), fact_style).wrap(178, H)[1] for _, value in C['facts']]
+    gap = min(16.5, (420 - 102 - sum(heights)) / (len(heights) - 1))
     y = 102
-    step = min(41, 287 / (len(C['facts']) - 1))  # last row stays inside the canvas panel
-    for key, value in C['facts']:
+    for (key, value), height in zip(C['facts'], heights):
         text(key.lower(), 68, y, 7.5, 'BodyBold', STITCH)
         para(E(value), 68, y+12, 178, 9.2, 12.5, 'BodyBold', PRESSED)
-        y += step
+        y += height + gap
     para(E(C['short']), 272, 92, 266, 11.5, 17, 'Body', PRESSED)
     leather(42, 464, 511, 300)
     tape('studio', 56, 478)
