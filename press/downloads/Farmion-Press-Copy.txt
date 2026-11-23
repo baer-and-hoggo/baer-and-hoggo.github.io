@@ -3,7 +3,8 @@ Baer & Hoggo Games
 Facts checked: 2026-10-08
 
 FACT SHEET
-Developer / publisher: Baer & Hoggo Games
+Developer: Baer & Hoggo Games
+Publisher: PlayWay S.A.
 Location: European Union
 Platform: Windows PC · Steam & Epic Games Store
 Planned release: Q1 2027

@@ -169,10 +169,11 @@ def make_pdf():
     tape('about', 56, 54)
     rect(56, 90, 200, 340, CANVAS, 5)
     y = 102
+    step = min(41, 287 / (len(C['facts']) - 1))  # last row stays inside the canvas panel
     for key, value in C['facts']:
         text(key.lower(), 68, y, 7.5, 'BodyBold', STITCH)
         para(E(value), 68, y+12, 178, 9.2, 12.5, 'BodyBold', PRESSED)
-        y += 41
+        y += step
     para(E(C['short']), 272, 92, 266, 11.5, 17, 'Body', PRESSED)
     leather(42, 464, 511, 300)
     tape('studio', 56, 478)
