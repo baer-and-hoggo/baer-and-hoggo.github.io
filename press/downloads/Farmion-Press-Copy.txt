@@ -6,7 +6,7 @@ FACT SHEET
 Developer: Baer & Hoggo OÜ
 Publisher: PlayWay S.A.
 Location: European Union
-Platform: Windows PC · Steam & Epic Games Store
+Platform: Windows PC · Steam
 Planned release: Q1 2027
 Genre: Cozy farming & life simulation
 Play modes: Single-player & online co-op
@@ -67,7 +67,6 @@ baerandhoggo@gmail.com
 
 OFFICIAL LINKS
 https://store.steampowered.com/app/2426390/Farmion/
-https://store.epicgames.com/p/farmion-f68e22
 https://baerandhoggo.com/#farmion
 https://discord.gg/mbnb2mC4K5
 X: https://x.com/BaerAndHoggo

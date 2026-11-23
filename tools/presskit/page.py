@@ -30,7 +30,7 @@ def copyblock(label, body, plain, extra=''):
 
 
 def page_html(C):
-    steam, epic = C['steam'], C['epic']
+    steam = C['steam']
     facts = copyblock('fact sheet',
                       '<dl class="pk-facts">' + ''.join(f'<div><dt>{E(k)}</dt><dd>{E(v)}</dd></div>' for k, v in C['facts']) + '</dl>',
                       '\n'.join(f'{k}: {v}' for k, v in C['facts']))
@@ -42,7 +42,7 @@ def page_html(C):
                         '<ul class="pk-patches">' + ''.join(f'<li>{E(item)}</li>' for item in C['in_game']) + '</ul>',
                         '\n'.join(f'- {item}' for item in C['in_game']))
     studio = copyblock('studio bio', f'<p>{E(C["studio_copy"])}</p>', C['studio_copy'])
-    link_rows = ([('Steam', steam), ('Epic Games Store', epic), ('Website', C['website']), ('Discord', C['discord'])]
+    link_rows = ([('Steam', steam), ('Website', C['website']), ('Discord', C['discord'])]
                  + [(x['name'], x['url']) for x in C['socials']])
     links = copyblock('links',
                       '<dl class="pk-facts">' + ''.join(
@@ -93,7 +93,6 @@ def page_html(C):
   <nav class="fs-wrap fs-toplinks" aria-label="Farmion links">
     <a class="fs-strap small fs-toplink-label" href="../#farmion"><span>← farmion</span></a>
     <a class="fs-icon-link" href="{steam}" aria-label="Steam" title="steam" target="_blank" rel="noopener">{icon('steam')}</a>
-    <a class="fs-icon-link" href="{epic}" aria-label="Epic Games Store" title="epic games store" target="_blank" rel="noopener">{icon('epic')}</a>
     <a class="fs-icon-link" href="{C['discord']}" aria-label="Discord" title="discord" target="_blank" rel="noopener">{icon('discord')}</a>
   </nav>
   <div class="fs-wrap fs-hero">

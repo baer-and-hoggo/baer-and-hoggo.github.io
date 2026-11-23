@@ -249,7 +249,7 @@ def make_pdf():
     leather(42, 566, 511, 120)
     tape('links', 56, 578, 13)
     x = 58
-    for label, url in [('steam', STEAM), ('epic games store', C['epic']), ('discord', C['discord']), ('website', C['website'])]:
+    for label, url in [('steam', STEAM), ('discord', C['discord']), ('website', C['website'])]:
         x += link(label, url, x, 612, 11, THREAD) + 20
     x = 58
     for social in C['socials']:
@@ -268,7 +268,7 @@ def text_copy():
     for person in C['team']:
         lines += [f"{person['name']} - {person['role']} - {person['country']}"]
         if 'linkedin' in person: lines += [person['linkedin']]
-    lines += ['','PRESS CONTACT',C['contact'],'','OFFICIAL LINKS',STEAM,C['epic'],C['website'],C['discord'],*[x['name']+': '+x['url'] for x in C['socials']],'','DEVELOPMENT STATUS','Farmion is in development and planned to release on Steam in Q1 2027. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.','', 'IMAGE CREDIT','Farmion / Baer & Hoggo OÜ.']
+    lines += ['','PRESS CONTACT',C['contact'],'','OFFICIAL LINKS',STEAM,C['website'],C['discord'],*[x['name']+': '+x['url'] for x in C['socials']],'','DEVELOPMENT STATUS','Farmion is in development and planned to release on Steam in Q1 2027. Features and visuals may change. Community creation tools are planned; Steam Workshop support is not confirmed.','', 'IMAGE CREDIT','Farmion / Baer & Hoggo OÜ.']
     return '\n'.join(lines)+'\n'
 
 
@@ -285,7 +285,7 @@ def package(page_count):
         for p in screenshots+brands:z.write(p,'Farmion-Press-Assets/'+p.relative_to(ROOT).as_posix())
         for name in ['Farmion-Press-Kit.pdf','Farmion-Press-Copy.txt']:z.write(DOWNLOADS/name,'Farmion-Press-Assets/'+name)
         z.write(ROOT/'asset-manifest.json','Farmion-Press-Assets/asset-manifest.json')
-        z.writestr('Farmion-Press-Assets/README.txt','FARMION / PRESS ASSETS\n'+C['edition']+'\n\nIncludes 21 original in-game screenshots, original transparent brand artwork, a '+str(page_count)+'-page PDF, and editable plain-text press copy.\n\nCredit: Farmion / Baer & Hoggo OÜ.\nContact: '+C['contact']+'\nSteam: '+STEAM+'\nEpic Games Store: '+C['epic']+'\n\nAll screenshots show a game in development. Logo and chicken/mascot artwork are separate brand assets. No AI-generated gameplay images have been added.\nSources and SHA-256 fingerprints are in asset-manifest.json.\n')
+        z.writestr('Farmion-Press-Assets/README.txt','FARMION / PRESS ASSETS\n'+C['edition']+'\n\nIncludes 21 original in-game screenshots, original transparent brand artwork, a '+str(page_count)+'-page PDF, and editable plain-text press copy.\n\nCredit: Farmion / Baer & Hoggo OÜ.\nContact: '+C['contact']+'\nSteam: '+STEAM+'\n\nAll screenshots show a game in development. Logo and chicken/mascot artwork are separate brand assets. No AI-generated gameplay images have been added.\nSources and SHA-256 fingerprints are in asset-manifest.json.\n')
 
 
 def manifest():
